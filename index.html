@@ -38,13 +38,6 @@
       let x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
       let y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buffer_y)) + 1;
       
-      //text style
-      ctx.font = "12px Arial";
-      ctx.fillStyle = "#000000";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-
-      
       // Initialize vars
       //current x/y block number
       let curr_x_block = 0;
@@ -71,7 +64,13 @@
         ctx.fillStyle = '#FFD700';
         ctx.fillRect(rect_x,rect_y,block_x,block_y);
 
-        //Add text
+        //Text style
+        ctx.font = "12px Arial";
+        ctx.fillStyle = "#000000";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        //Add Text
         curr_center_x = rect_x + (block_x / 2);
         curr_center_y = rect_y + (block_y / 2);
         ctx.fillText(FiveBers[i], curr_center_x, curr_center_y);
