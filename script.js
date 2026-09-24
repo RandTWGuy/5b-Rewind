@@ -1,10 +1,6 @@
-// canvas dimensions (update manually with the canvas!)
+	// canvas dimensions (update manually with the canvas!)
     let canvas_x = 750
     let canvas_y = 750
-          
-    // canvas
-    const canvas = document.getElementById('myCanvas');
-    const ctx = canvas.getContext('2d');
     
     // Margin
     let margin_x = 50;
