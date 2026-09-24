@@ -10,33 +10,73 @@
     This is ARandomTaiwaneseGuy(<a href = https://www.youtube.com/@ARandomTaiwaneseGuy>YT</a>)/yuGesenawiaTmodnaRA(<a href = https://www.speedrun.com/users/yuGesenawiaTmodnaRA>speedrun.com</a>)/RandTWGuy(Github)'s BFDIA 5b time hopper.
     <br>
     <!-- Put the canvas here -->
-    <canvas id="myCanvas" width="750" height="300" style="border:1px solid #ccc;"></canvas>
+    <canvas id="myCanvas" width="750" height="750" style="border:1px solid #ccc;"></canvas>
     <script>
+      let canvas_x = 750
+      let canvas_y = 750
+      //List of 5b-ers
+      const FiveBers = ['Korzen','Numbly','Drayoshi','yuGesenawiaTmodnaRA','Yariktopikser'];
+      const player_count = FiveBers.length;
+      
       // canvas
       const canvas = document.getElementById('myCanvas');
       const ctx = canvas.getContext('2d');
 
-      // start xy of THE  block
-      let block_x = 50
-      let block_y = 50
+      // Margin
+      let margin_x = 50;
+      let margin_y = 50;
       
       // width and height of a single block
-      let width = 100
-      let height = 100
+      let block_x = 100;
+      let block_y = 100;
 
-      // Rectangle
-      ctx.fillStyle = '#FFD700';
-      ctx.fillRect(block_x, block_y, width, height);
+      //space between blocks
+      let buffer_x = 25;
+      let buffer_y = 25;
 
+      //blocks that fit per axis
+      let x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
+      let y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buffer_y)) + 1;
+      
       //text style
       ctx.font = "12px Arial";
       ctx.fillStyle = "#000000";
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
+
       
-      const centerX = block_x + (width / 2);
-      const centerY = block_y + (height / 2);
-      ctx.fillText("Korzen, GOAT", centerX, centerY);
+      // Initialize vars
+      //current x/y block number
+      let curr_x_block = 0;
+      let curr_y_block = 0;
+      //rectangle corner coordinates
+      let rect_x = 0;
+      let rect_y = 0;
+      //rectangle center coordinates
+      let curr_center_x = 0;
+      let curr_center_y = 0;
+      
+      // Loop through everybody
+      for (let i = 0; i < player_count; i++){
+        //Calculate x_block and y_block coordinates
+        //0-indexed
+        curr_x_block = i % x_blocks;
+        curr_y_block = (i - curr_x_block)/x_blocks
+        
+        //Calculate the Rectangle
+        rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
+        rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
+        
+        //Draw the Rectangle
+        ctx.fillStyle = '#FFD700';
+        ctx.fillRect(rect_x,rect_y,block_x,block_y);
+
+        //Add text
+        curr_center_x = rect_x + (block_x / 2);
+        curr_center_y = rect_y + (block_y / 2);
+        ctx.fillText(FiveBers[i], curr_center_x, curr_center_y);
+      }
+      
     </script>
     <br>
     <b>More stuff coming soon!</b>
