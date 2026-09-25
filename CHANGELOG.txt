@@ -1,9 +1,9 @@
-# CHANGELOG
+CHANGELOG
 
-## 2026/9/25:
+2026/9/25:
 Work Time: 1.5hrs
-- Renamed *BFDIA 5b time hopper* to *5b Rewind*.
-- Created a *script.js* file outside of *index.html*. This is where most of the logic goes.
+- Renamed BFDIA 5b time hopper to 5b Rewind.
+- Created a script.js file outside of index.html. This is where most of the logic goes.
 - Added a date slider from 2018-11-02 to today. But it has some time zone issues.
 - Released v0.0.2
 
