@@ -37,8 +37,9 @@
 	const display = document.getElementById('dateDisplay');
 
 	// Set the slider's vals
-	slider.min = start_time_stamp;
+	// First max then min to not mess the slider up
 	slider.max = end_time_stamp;
+	slider.min = start_time_stamp;
 	slider.step = 86400000;
 	slider.value = start_time_stamp; //Default to 2018
 
