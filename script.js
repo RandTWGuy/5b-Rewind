@@ -3,16 +3,16 @@
     let canvas_y = 750
     
     // Margin
-    let margin_x = 50;
-    let margin_y = 50;
+    let margin_x = 25;
+    let margin_y = 25;
     
     // width and height of a single block
     let block_x = 100;
     let block_y = 100;
     
     //space between blocks
-    let buffer_x = 25;
-    let buffer_y = 25;
+    let buffer_x = 20;
+    let buffer_y = 20;
 
     //blocks that fit per axis
     let x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
