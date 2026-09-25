@@ -22,11 +22,56 @@
     ctx.fillStyle = '#ADD8E6';
     ctx.fillRect(0,0,canvas_x,canvas_y);
 
+	//--------------------------------------------------------------------------------------------------------------------------------
+	
+	// Initialize vars
+    //List of 5b-ers' data:
+	/*
+	[
+	[player1,[
+	[Date1,PR1],[Date2,PR2],[Data3,PR3]
+	]],
+	[player2,[
+	[Date1,PR1],[Date2,PR2],[Data3,PR3]
+	]],
+	[player3,[
+	[Date1,PR1],[Date2,PR2],[Data3,PR3]
+	]]
+	]
+	*/
+    const FiveBerData = 
+      [
+		  ['me',
+		   [[1789344000000,1079450],[1789862400000,974417]]
+		  ],
+		  ['me2',
+		   [[1789344000000,1089450],[1789862400000,984417]]
+		  ]
+	  ];
+    const player_count = FiveBers.length;
 
-	// The slider
+	const curr_PRs = FiveBerData;//Will turn into [[player1,PR1],[player2,PR2]] eventually
+	curr_player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually
+	
+    //current x/y block number
+    let curr_x_block = 0;
+    let curr_y_block = 0;
+    //rectangle corner coordinates
+    let rect_x = 0;
+    let rect_y = 0;
+    //rectangle center coordinates
+    let curr_center_x = 0;
+    let curr_center_y = 0;
+    
+	//Text style
+	ctx.font = "12px Arial";
+	ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+	
+	// The slider and it's updates
 	// Start and End Dates
-	const start_date = new Date('2018-11-02T00:00:00');
-	const end_date = new Date();
+	const start_date = new Date('2018-11-02T00:00:00Z');
+	const end_date = new Date(new Date().toUTCString());
 
 	// Timestampize the dates
 	const start_time_stamp = start_date.getTime();
@@ -51,48 +96,42 @@
   		// Output as YYYYY-MM-DD. Ignore the time.
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
-	});
 
-	// Initialize vars
-    //List of 5b-ers
-    const FiveBers = 
-      ['Numbly','KorZen','1000%','DraYoshi','JJJ',
-       'ItsMarker','ader_pulse','AntLadders','DrawfWizard','Trevarity',
-	   'coppersalts','Mythical Rocket','MyShuckle','Meester Tweester','meanietweezie',
-	   'me','CloverDrop','MatveiYT012','The Gamer Pug','yyy15err'];
-    const player_count = FiveBers.length;
-    //current x/y block number
-    let curr_x_block = 0;
-    let curr_y_block = 0;
-    //rectangle corner coordinates
-    let rect_x = 0;
-    let rect_y = 0;
-    //rectangle center coordinates
-    let curr_center_x = 0;
-    let curr_center_y = 0;
+		// //Calculate everyone's PRs at this time
+		// for (let i = 0; i < player_count; i++){
+		// 	//list of runs (timestamp+PR)
+		// 	curr_player_data = FiveBerData[i][1]
+		// 	//loop over all runs
+		// 	for (let j = 0; j < curr_player_data.length; j++){
+		// 		//the current run & when it was performed
+		// 		curr_run = curr_player_data[j];
+		// 		curr_run_timestamp = curr_run[0];
+		// 		//if run was performed before current time, then it's a PR. 
+		// 		//This is because the runs are ordered by time.
+				
+		// 	}
+		// }
+		// // Loop through everybody
+  //   	for (let i = 0; i < player_count; i++){
+  //     		//Calculate x_block and y_block coordinates
+  //     		//0-indexed
+  //     		curr_x_block = i % x_blocks;
+  //     		curr_y_block = (i - curr_x_block)/x_blocks
+      		
+  //     		//Calculate the Rectangle
+  //     		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
+  //     		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
       
-    // Loop through everybody
-    for (let i = 0; i < player_count; i++){
-      //Calculate x_block and y_block coordinates
-      //0-indexed
-      curr_x_block = i % x_blocks;
-      curr_y_block = (i - curr_x_block)/x_blocks
-      
-      //Calculate the Rectangle
-      rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
-      rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
-      
-      //Draw the Rectangle/Block
-      ctx.fillStyle = '#FFD700';
-      ctx.fillRect(rect_x,rect_y,block_x,block_y);
-      //Text style
-      ctx.font = "12px Arial";
-      ctx.fillStyle = "#000000";//black
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-			
-      //Add Text
-      curr_center_x = rect_x + (block_x / 2);
-      curr_center_y = rect_y + (block_y / 2);
-      ctx.fillText(FiveBers[i], curr_center_x, curr_center_y);
-    }
+  //     		//Draw the Rectangle/Block
+  //     		ctx.fillStyle = '#FFD700';
+  //     		ctx.fillRect(rect_x,rect_y,block_x,block_y);
+      		
+	 //  		//Text color
+  //     		ctx.fillStyle = "#000000";//black
+      		
+		// 	//Add Text
+  //     		curr_center_x = rect_x + (block_x / 2);
+  //    		curr_center_y = rect_y + (block_y / 2);
+  //     		//ctx.fillText(FiveBerData[i], curr_center_x, curr_center_y);
+  //   	}
+	});
