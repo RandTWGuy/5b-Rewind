@@ -52,7 +52,7 @@
     const player_count = FiveBerData.length;
 
 	const curr_PRs = structuredClone(FiveBerData);//Will turn into [[player1,PR1],[player2,PR2]] eventually
-	curr_player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually
+	let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
     //current x/y block number
@@ -102,7 +102,7 @@
 		//Calculate everyone's PRs at this time
 		for (let i = 0; i < player_count; i++){
 			//list of runs (timestamp+PR)
-			let player_data = FiveBerData[i][1];
+			player_data = FiveBerData[i][1];
 			//check if the player has a run at this time
 			//curr_player_data[0][0] is the timestamp of the first ever run
 			if (curr_timestamp < player_data[0][0]){
