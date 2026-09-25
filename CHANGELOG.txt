@@ -1,4 +1,9 @@
-CHANGELOG
+CHANGELOG FOR 5B REWIND
+
+TODO:
+- Make default slider date today instead of 2018-11-02.
+- Fix bug/unintended behavior where the blocks do not show up until you move the slider.
+- Collect data from actual runners.
 
 2026/9/25:
 Work Time: 4hrs
@@ -9,7 +14,7 @@ Work Time: 4hrs
 - Added the complicated list FiveBerData
 - Made a PR-decider based on the time and FiveBerData. Defaults to 1hr if the player hasn't ran the game back then yet.
 - Fixed a lot of bugs and typos the PR-decider caused.
-- Added the player's PR as of the date selected to the player's block (in milliseconds).
+- Added the player's PR, as of the date selected to the player's block.
 
 
 2026/9/24:
