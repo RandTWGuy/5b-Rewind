@@ -56,7 +56,7 @@
 	// Initialize vars
     //List of 5b-ers
     const FiveBers = 
-      ['Korzen','Numbly','Drayoshi','1000%','Meester \n Tweester',
+      ['Korzen','Numbly','Drayoshi','1000%','MeesterTweester',
        'yuGesenawiaTmodnaRA','Yariktopikser','Pug','PhantomInfinity','carykh'];
     const player_count = FiveBers.length;
     //current x/y block number
