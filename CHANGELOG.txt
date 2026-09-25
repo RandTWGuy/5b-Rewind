@@ -8,6 +8,7 @@ Work Time: 4hrs
 - Released v0.0.2
 - Added the complicated list FiveBerData
 - Made a PR-decider based on the time and FiveBerData. Defaults to 1hr if the player hasn't ran the game back then yet.
+- Fixed a lot of bugs and typos the PR-decider caused.
 
 
 2026/9/24:
