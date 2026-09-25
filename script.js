@@ -52,6 +52,7 @@
 
 	const curr_PRs = FiveBerData;//Will turn into [[player1,PR1],[player2,PR2]] eventually
 	curr_player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually
+	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
     //current x/y block number
     let curr_x_block = 0;
@@ -97,41 +98,52 @@
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
 
-		// //Calculate everyone's PRs at this time
-		// for (let i = 0; i < player_count; i++){
-		// 	//list of runs (timestamp+PR)
-		// 	curr_player_data = FiveBerData[i][1]
-		// 	//loop over all runs
-		// 	for (let j = 0; j < curr_player_data.length; j++){
-		// 		//the current run & when it was performed
-		// 		curr_run = curr_player_data[j];
-		// 		curr_run_timestamp = curr_run[0];
-		// 		//if run was performed before current time, then it's a PR. 
-		// 		//This is because the runs are ordered by time.
-				
-		// 	}
-		// }
-		// // Loop through everybody
-  //   	for (let i = 0; i < player_count; i++){
-  //     		//Calculate x_block and y_block coordinates
-  //     		//0-indexed
-  //     		curr_x_block = i % x_blocks;
-  //     		curr_y_block = (i - curr_x_block)/x_blocks
+		//Calculate everyone's PRs at this time
+		for (let i = 0; i < player_count; i++){
+			//list of runs (timestamp+PR)
+			curr_player_data = FiveBerData[i][1];
+			//check if the player has a run at this time
+			//curr_player_data[0][0] is the timestamp of the first ever run
+			if (curr_timestamp < curr_player_data[0][0]){
+				// if player doesn't have a run yet:
+				// set their PR to 1hr, default
+				curr_PRs[i][1] = 3600000;
+			} else {
+				//if player already has runs:
+				//keep running, from early to late runs, if run is before curr_timestamp
+				let run_index = 0;
+				while (curr_timestamp >= curr_player_data[run_index][0]){
+					run_index++;
+				}
+				//when run is finally after curr_timestamp, 
+				//decrease run_index by 1 to get the curr_PR's run index
+				run_index--;
+				//this run is the curr_PR.
+				curr_PRs[i][1] = curr_player_data[run_index][1];
+			}	
+		}
+		// Loop through everybody
+    	for (let i = 0; i < player_count; i++){
+      		//Calculate x_block and y_block coordinates
+      		//0-indexed
+      		curr_x_block = i % x_blocks;
+      		curr_y_block = (i - curr_x_block)/x_blocks
       		
-  //     		//Calculate the Rectangle
-  //     		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
-  //     		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
+      		//Calculate the Rectangle
+      		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
+      		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
       
-  //     		//Draw the Rectangle/Block
-  //     		ctx.fillStyle = '#FFD700';
-  //     		ctx.fillRect(rect_x,rect_y,block_x,block_y);
+      		//Draw the Rectangle/Block
+      		ctx.fillStyle = '#FFD700';
+      		ctx.fillRect(rect_x,rect_y,block_x,block_y);
       		
-	 //  		//Text color
-  //     		ctx.fillStyle = "#000000";//black
+	  		//Text color
+      		ctx.fillStyle = "#000000";//black
       		
-		// 	//Add Text
-  //     		curr_center_x = rect_x + (block_x / 2);
-  //    		curr_center_y = rect_y + (block_y / 2);
-  //     		//ctx.fillText(FiveBerData[i], curr_center_x, curr_center_y);
-  //   	}
+			//Add Text
+      		curr_center_x = rect_x + (block_x / 2);
+     		curr_center_y = rect_y + (block_y / 2);
+      		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y);
+			ctx.fillText(Curr_PRs[i][1], curr_center_x, curr_center_y);
+    	}
 	});
