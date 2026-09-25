@@ -39,6 +39,7 @@
 	]]
 	]
 	*/
+	//Each player must have at least one run
     const FiveBerData = 
       [
 		  ['me',
@@ -48,9 +49,9 @@
 		   [[1789344000000,1089450],[1789862400000,984417]]
 		  ]
 	  ];
-    const player_count = FiveBers.length;
+    const player_count = FiveBerData.length;
 
-	const curr_PRs = FiveBerData;//Will turn into [[player1,PR1],[player2,PR2]] eventually
+	const curr_PRs = structuredClone(FiveBerData);//Will turn into [[player1,PR1],[player2,PR2]] eventually
 	curr_player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
@@ -101,25 +102,22 @@
 		//Calculate everyone's PRs at this time
 		for (let i = 0; i < player_count; i++){
 			//list of runs (timestamp+PR)
-			curr_player_data = FiveBerData[i][1];
+			let player_data = FiveBerData[i][1];
 			//check if the player has a run at this time
 			//curr_player_data[0][0] is the timestamp of the first ever run
-			if (curr_timestamp < curr_player_data[0][0]){
+			if (curr_timestamp < player_data[0][0]){
 				// if player doesn't have a run yet:
 				// set their PR to 1hr, default
 				curr_PRs[i][1] = 3600000;
 			} else {
-				//if player already has runs:
-				//keep running, from early to late runs, if run is before curr_timestamp
-				let run_index = 0;
-				while (curr_timestamp >= curr_player_data[run_index][0]){
-					run_index++;
+				// if player already has runs:
+				// keep running, from late to early runs, if run is after curr_timestamp
+				let run_index = player_data.length - 1;
+				while (curr_timestamp < player_data[run_index][0]){
+					run_index--;
 				}
-				//when run is finally after curr_timestamp, 
-				//decrease run_index by 1 to get the curr_PR's run index
-				run_index--;
 				//this run is the curr_PR.
-				curr_PRs[i][1] = curr_player_data[run_index][1];
+				curr_PRs[i][1] = player_data[run_index][1];
 			}	
 		}
 		// Loop through everybody
@@ -144,6 +142,6 @@
       		curr_center_x = rect_x + (block_x / 2);
      		curr_center_y = rect_y + (block_y / 2);
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y);
-			ctx.fillText(Curr_PRs[i][1], curr_center_x, curr_center_y);
+			ctx.fillText(String(curr_PRs[i][1]), curr_center_x, curr_center_y + block_y/2);
     	}
 	});
