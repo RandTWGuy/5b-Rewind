@@ -24,8 +24,8 @@
 
 
 	// The slider
-	// Start and End Dates.
-	const start_date = new Date('2026-11-02T00:00:00');
+	// Start and End Dates
+	const start_date = new Date('2018-11-02T00:00:00');
 	const end_date = new Date();
 
 	// Timestampize the dates
