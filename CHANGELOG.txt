@@ -9,6 +9,7 @@ Work Time: 4hrs
 - Added the complicated list FiveBerData
 - Made a PR-decider based on the time and FiveBerData. Defaults to 1hr if the player hasn't ran the game back then yet.
 - Fixed a lot of bugs and typos the PR-decider caused.
+- Added the player's PR as of the date selected to the player's block (in milliseconds).
 
 
 2026/9/24:
