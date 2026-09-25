@@ -56,8 +56,10 @@
 	// Initialize vars
     //List of 5b-ers
     const FiveBers = 
-      ['Korzen','Numbly','Drayoshi','1000%','MeesterTweester',
-       'yuGesenawiaTmodnaRA','Yariktopikser','Pug','PhantomInfinity','carykh'];
+      ['Numbly','KorZen','1000%','DraYoshi','JJJ',
+       'ItsMarker','ader_pulse','AntLadders','DrawfWizard','Trevarity',
+	   'coppersalts','Mythical Rocket','MyShuckle','Meester Tweester','meanietweezie',
+	   'me','CloverDrop','MatveiYT012','The Gamer Pug','yyy15err'];
     const player_count = FiveBers.length;
     //current x/y block number
     let curr_x_block = 0;
