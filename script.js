@@ -21,8 +21,38 @@
     // Drawing a rectangle over the whole canvas
     ctx.fillStyle = '#ADD8E6';
     ctx.fillRect(0,0,canvas_x,canvas_y);
-     
-    // Initialize vars
+
+
+	// The slider
+	// Start and End Dates.
+	const start_date = new Date('2026-11-02T00:00:00');
+	const end_date = new Date();
+
+	// Timestampize the dates
+	const start_time_stamp = start_date.getTime();
+	const end_time_stamp = end_date.getTime();
+
+	// Tell JS about the slider
+	const slider = document.getElementById('dateSlider');
+	const display = document.getElementById('dateDisplay');
+
+	// Set the slider's vals
+	slider.min = start_time_stamp;
+	slider.max = end_time_stamp;
+	slider.step = 86400000;
+	slider.value = start_time_stamp; //Default to 2018
+
+	// Check if the slider is changing
+	slider.addEventListener('input', (e) => {
+ 		const curr_timestamp = Number(e.target.value);
+  		const curr_date = new Date(curr_timestamp);
+  
+  		// Output as YYYYY-MM-DD. Ignore the time.
+ 		const formatted_date = curr_date.toISOString().split('T')[0];
+  		display.textContent = formatted_date;
+	});
+
+	// Initialize vars
     //List of 5b-ers
     const FiveBers = 
       ['Korzen','Numbly','Drayoshi','1000%','Meester \n Tweester',
