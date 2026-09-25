@@ -68,7 +68,7 @@
 	//Text style
 	ctx.font = "12px Arial";
 	ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
+    
 	
 	// The slider and it's updates
 	// Start and End Dates
@@ -141,7 +141,9 @@
 			//Add Text
       		curr_center_x = rect_x + (block_x / 2);
      		curr_center_y = rect_y + (block_y / 2);
+			ctx.textBaseline = "middle";
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y);
+			ctx.textBaseline = "bottom";
 			ctx.fillText(String(curr_PRs[i][1]), curr_center_x, curr_center_y + block_y/2);
     	}
 	});
