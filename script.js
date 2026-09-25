@@ -107,8 +107,8 @@
 			//curr_player_data[0][0] is the timestamp of the first ever run
 			if (curr_timestamp < player_data[0][0]){
 				// if player doesn't have a run yet:
-				// set their PR to 1hr, default
-				curr_PRs[i][1] = 3600000;
+				// set their PR to 1hr as default
+				curr_PRs[i][1] = "1:00:00";
 			} else {
 				// if player already has runs:
 				// keep running, from late to early runs, if run is after curr_timestamp
