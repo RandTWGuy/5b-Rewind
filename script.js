@@ -43,10 +43,10 @@
     const FiveBerData = 
       [
 		  ['me',
-		   [[1789344000000,1079450],[1789862400000,974417]]
+		   [[1789344000000,"17:59.450"],[1789862400000,"16:14.417"]]
 		  ],
-		  ['me2',
-		   [[1789344000000,1089450],[1789862400000,984417]]
+		  ['fake me',
+		   [[1789430400000,"27:59.450"],[1789948800000,"26:14.417"]]
 		  ]
 	  ];
     const player_count = FiveBerData.length;
@@ -144,6 +144,6 @@
 			ctx.textBaseline = "center";
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y - (block_y / 4));
 			ctx.textBaseline = "center";
-			ctx.fillText(String(curr_PRs[i][1]), curr_center_x, curr_center_y + (block_y / 4));
+			ctx.fillText(curr_PRs[i][1], curr_center_x, curr_center_y + (block_y / 4));
     	}
 	});
