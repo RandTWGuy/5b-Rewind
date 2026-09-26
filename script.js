@@ -42,7 +42,7 @@
 	//Each player must have at least one run
     const FiveBerData = 
       [
-		  ['me',
+		  ['me, the dev',
 		   [[1789344000000,1079450],
 			[1789862400000,974417]]
 		  ],
@@ -56,7 +56,9 @@
 	  ];
     const player_count = FiveBerData.length;
 
-	const curr_PRs = structuredClone(FiveBerData);//Will turn into [[player1,PR1],[player2,PR2]] eventually
+	const curr_PRs = structuredClone(FiveBerData);
+	//Will turn into [[player1,PR1],[player2,PR2]] eventually
+	//need player names 'cause we're gonna sort this thing in order
 	let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
@@ -125,6 +127,8 @@
 				curr_PRs[i][1] = player_data[run_index][1];
 			}	
 		}
+		//sort curr_PRs by time, sorting the player names with them
+		curr_PRs.sort((a,b) => a[1] - b[1])
 		// Loop through everybody
     	for (let i = 0; i < player_count; i++){
       		//Calculate x_block and y_block coordinates
@@ -136,8 +140,19 @@
       		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
       		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
       
-      		//Draw the Rectangle/Block
-      		ctx.fillStyle = '#FFD700';
+      		//Clear the last block
+			ctx.clearRect(rect_x,rect_y,block_x,block_y);
+			//set color
+			if (i == 0){
+				ctx.fillStyle = 'gold';
+			} else if (i == 1){
+				ctx.fillStyle = 'silver';
+			} else if (i == 2){
+				ctx.fillStyle = 'peru';
+			} else {
+      			ctx.fillStyle = '#FFD700';
+			}
+			//draw rect
       		ctx.fillRect(rect_x,rect_y,block_x,block_y);
       		
 	  		//Text color
@@ -148,7 +163,7 @@
 			curr_center_y = rect_y + (block_y / 2);
 			//Player name text
 			ctx.textBaseline = "center";
-      		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y - (block_y / 4));
+      		ctx.fillText(currPRs[i][0], curr_center_x, curr_center_y - (block_y / 4));
 			
 			//PR time text
 			let text;
