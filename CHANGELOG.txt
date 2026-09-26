@@ -2,11 +2,17 @@ CHANGELOG FOR 5B REWIND
 
 TODO:
 - Make default slider date today instead of 2018-11-02.
-- Fix bug/unintended behavior where the blocks do not show up until you move the slider.
 - Collect data from actual runners.
 
+2026/9/26:
+Work Time: 1.5hrs
+- Added DraYoshi's data, replacing the in-testing "fake-me" player.
+- Fixed bug/unintended behavior where the blocks do not show up until you move the slider, by loading the main function once before the slider move detection. This caused even more bugs, which I also fixed.
+- Fixed bug with DraYoshi's data (I forgot to close an array)
+- Displays formatted mm:ss:xxx time instead of milliseconds.
+
 2026/9/25:
-Work Time: 4hrs
+Work Time: 4.5hrs
 - Renamed BFDIA 5b time hopper to 5b Rewind.
 - Created a script.js file outside of index.html. This is where most of the logic goes.
 - Added a date slider from 2018-11-02 to today. But it has some time zone issues.
@@ -15,6 +21,7 @@ Work Time: 4hrs
 - Made a PR-decider based on the time and FiveBerData. Defaults to 1hr if the player hasn't ran the game back then yet.
 - Fixed a lot of bugs and typos the PR-decider caused.
 - Added the player's PR, as of the date selected to the player's block.
+- Released v0.1.1.
 
 
 2026/9/24:
