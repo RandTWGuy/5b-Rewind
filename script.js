@@ -161,7 +161,7 @@
       		//Calculate x_block and y_block coordinates
       		//0-indexed
       		curr_x_block = i % x_blocks;
-      		curr_y_block = (i - curr_x_block)/x_blocks
+      		curr_y_block = (i - curr_x_block)/x_blocks;
       		
       		//Calculate the Rectangle
       		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
@@ -205,9 +205,9 @@
 				let PR_sec = PR_time%60;
 				let PR_min = (PR_time - PR_sec)/60;
 				//make sec always have two digits
-				PR_sec = ('0' + PR_sec).slice(-2)
+				PR_sec = ('0' + PR_sec).slice(-2);
 				//make ms always have three digits
-				PR_ms = ('00' + PR_ms).slice(-3)
+				PR_ms = ('00' + PR_ms).slice(-3);
 				
 				//text
 				text = `${PR_min}:${PR_sec}.${PR_ms}`;
