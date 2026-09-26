@@ -161,6 +161,11 @@
 				PR_time = (PR_time - PR_ms)/1000;
 				let PR_sec = PR_time%60;
 				let PR_min = (PR_time - PR_sec)/60;
+				//make sec always have two digits
+				PR_sec = ('0' + PR_sec).slice(-2)
+				//make ms always have three digits
+				PR_ms = ('00' + PR_ms).slice(-3)
+				
 				//text
 				const text = `${PR_min}:${PR_sec}.${PR_ms}`;
 			}
