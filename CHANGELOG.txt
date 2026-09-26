@@ -10,6 +10,7 @@ Work Time: 1.5hrs
 - Fixed bug/unintended behavior where the blocks do not show up until you move the slider, by loading the main function once before the slider move detection. This caused even more bugs, which I also fixed.
 - Fixed bug with DraYoshi's data (I forgot to close an array)
 - Displays formatted mm:ss:xxx time instead of milliseconds. If no run yet, shows "NO RUN YET".
+- Ensured leading zeros in the sec and ms fields of the time.
 
 2026/9/25:
 Work Time: 4.5hrs
