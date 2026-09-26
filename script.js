@@ -153,7 +153,7 @@
 	}
 
 	//Run function once
-	update(slider.value);
+	update(Number(slider.value));
 	// Check if the slider is changing
 	slider.addEventListener('input', (e) => {
  		update(Number(e.target.value));
