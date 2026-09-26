@@ -55,10 +55,6 @@
 		  ]
 	  ];
     const player_count = FiveBerData.length;
-
-	const curr_PRs = structuredClone(FiveBerData);
-	//Will turn into [[player1,PR1],[player2,PR2]] eventually
-	//need player names 'cause we're gonna sort this thing in order
 	let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
@@ -105,6 +101,9 @@
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
 
+		const curr_PRs = structuredClone(FiveBerData);
+		//Will turn into [[player1,PR1],[player2,PR2]] eventually
+		//need player names 'cause we're gonna sort this thing in order
 		//Calculate everyone's PRs at this time
 		for (let i = 0; i < player_count; i++){
 			//list of runs (timestamp+PR)
