@@ -61,14 +61,14 @@
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
     //current x/y block number
-    let curr_x_block = 0;
-    let curr_y_block = 0;
+    let curr_x_block;
+    let curr_y_block;
     //rectangle corner coordinates
-    let rect_x = 0;
-    let rect_y = 0;
+    let rect_x;
+    let rect_y;
     //rectangle center coordinates
-    let curr_center_x = 0;
-    let curr_center_y = 0;
+    let curr_center_x;
+    let curr_center_y;
     
 	//Text style
 	ctx.font = "12px Arial";
@@ -151,10 +151,11 @@
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y - (block_y / 4));
 			
 			//PR time text
+			let text;
 			let PR_time = curr_PRs[i][1];
 			if (PR_time == 3600000){
 				//The PR_time is still a number for comparison purposes; 3600000 acts like infty on this scale.
-				const text = "NO RUN YET";
+				text = "NO RUN YET";
 			} else {
 				//Convert to mm:ss:xxx
 				let PR_ms = PR_time%1000;
@@ -167,7 +168,7 @@
 				PR_ms = ('00' + PR_ms).slice(-3)
 				
 				//text
-				const text = `${PR_min}:${PR_sec}.${PR_ms}`;
+				text = `${PR_min}:${PR_sec}.${PR_ms}`;
 			}
 			//Display text
 			ctx.textBaseline = "center";
