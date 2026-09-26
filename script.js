@@ -142,13 +142,22 @@
 	  		//Text color
       		ctx.fillStyle = "#000000";//black
       		
-			//Add Text
+			//Calculate center of block
       		curr_center_x = rect_x + (block_x / 2);
 			curr_center_y = rect_y + (block_y / 2);
+			//Player name text
 			ctx.textBaseline = "center";
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y - (block_y / 4));
+			//PR time text
+			let PR_time = curr_PRs[i][1];
+			let PR_ms = PR_time%1000;
+			PR_time = (PR_time - PR_ms)/1000;
+			let PR_sec = PR_time%60;
+			let PR_min = (PR_time - PR_sec)/60;
+			
+			const text = `${PR_min}:${PR_sec}.${PR_ms}`;
 			ctx.textBaseline = "center";
-			ctx.fillText(curr_PRs[i][1], curr_center_x, curr_center_y + (block_y / 4));
+			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 4));
     	}
 	}
 
