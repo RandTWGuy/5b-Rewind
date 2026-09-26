@@ -1,6 +1,6 @@
 	// canvas dimensions (update manually with the canvas!)
-    let canvas_x = 750
-    let canvas_y = 750
+    let canvas_x = 750;
+    let canvas_y = 750;
     
     // Margin
     let margin_x = 25;
