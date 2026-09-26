@@ -111,8 +111,9 @@
 			//curr_player_data[0][0] is the timestamp of the first ever run
 			if (curr_timestamp < player_data[0][0]){
 				// if player doesn't have a run yet:
-				// set their PR to 1hr as default
-				curr_PRs[i][1] = "1:00:00.000";
+				// set their PR to an 3600000, which means "NO RUN YET"
+				// so that converting to mm:ss:xxx can have an exception
+				curr_PRs[i][1] = 3600000;
 			} else {
 				// if player already has runs:
 				// keep running, from late to early runs, if run is after curr_timestamp
@@ -148,14 +149,22 @@
 			//Player name text
 			ctx.textBaseline = "center";
       		ctx.fillText(FiveBerData[i][0], curr_center_x, curr_center_y - (block_y / 4));
+			
 			//PR time text
 			let PR_time = curr_PRs[i][1];
-			let PR_ms = PR_time%1000;
-			PR_time = (PR_time - PR_ms)/1000;
-			let PR_sec = PR_time%60;
-			let PR_min = (PR_time - PR_sec)/60;
-			
-			const text = `${PR_min}:${PR_sec}.${PR_ms}`;
+			if (PR_time == 3600000){
+				//The PR_time is still a number for comparison purposes; 3600000 acts like infty on this scale.
+				const text = "NO RUN YET";
+			} else {
+				//Convert to mm:ss:xxx
+				let PR_ms = PR_time%1000;
+				PR_time = (PR_time - PR_ms)/1000;
+				let PR_sec = PR_time%60;
+				let PR_min = (PR_time - PR_sec)/60;
+				//text
+				const text = `${PR_min}:${PR_sec}.${PR_ms}`;
+			}
+			//Display text
 			ctx.textBaseline = "center";
 			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 4));
     	}
