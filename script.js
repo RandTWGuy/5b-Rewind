@@ -95,11 +95,10 @@
 	slider.step = 86400000;
 	slider.value = start_time_stamp; //Default to 2018
 
-	// Check if the slider is changing
-	slider.addEventListener('input', (e) => {
- 		const curr_timestamp = Number(e.target.value);
+	//Function Code: Updating
+	function update(curr_timestamp){
   		const curr_date = new Date(curr_timestamp);
-  
+  		
   		// Output as YYYYY-MM-DD. Ignore the time.
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
@@ -151,4 +150,11 @@
 			ctx.textBaseline = "center";
 			ctx.fillText(curr_PRs[i][1], curr_center_x, curr_center_y + (block_y / 4));
     	}
+	}
+
+	//Run function once
+	update(slider.value);
+	// Check if the slider is changing
+	slider.addEventListener('input', (e) => {
+ 		update(Number(e.target.value));
 	});
