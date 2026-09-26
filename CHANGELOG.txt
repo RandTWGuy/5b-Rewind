@@ -5,7 +5,7 @@ TODO:
 - Collect data from actual runners.
 
 2026/9/26:
-Work Time: 3.5hrs
+Work Time: 4hrs
 - Added DraYoshi's data!
 - Fixed bug/unintended behavior where the blocks do not show up until you move the slider, by loading the main function once before the slider move detection. This caused even more bugs, which I also fixed.
 - Fixed bug with DraYoshi's data (I forgot to close an array)
@@ -14,6 +14,7 @@ Work Time: 3.5hrs
 - Sorted the runs by time instead of player name. (This took so long)
 - Added colors for 1st, 2nd, 3rd placers.
 - Added Numbly's data!
+- Added Korzen's data! (srsly this took up the most boring 30 minutes in my life why do you have so many runs)
 
 2026/9/25:
 Work Time: 4.5hrs
