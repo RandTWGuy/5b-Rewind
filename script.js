@@ -163,7 +163,7 @@
 			curr_center_y = rect_y + (block_y / 2);
 			//Player name text
 			ctx.textBaseline = "center";
-      		ctx.fillText(currPRs[i][0], curr_center_x, curr_center_y - (block_y / 4));
+      		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 4));
 			
 			//PR time text
 			let text;
