@@ -208,7 +208,7 @@
 			} else if (i == 2){
 				ctx.fillStyle = 'peru';
 			} else {
-      			ctx.fillStyle = 'darkblue';
+      			ctx.fillStyle = 'white';
 			}
 			//draw rect
       		ctx.fillRect(rect_x,rect_y,block_x,block_y);
