@@ -156,7 +156,7 @@
 	slider.max = end_time_stamp;
 	slider.min = start_time_stamp;
 	slider.step = 86400000;
-	slider.value = start_time_stamp; //Default to 2018
+	slider.value = end_time_stamp; //Default to today
 
 	//Function Code: Updating
 	function update(curr_timestamp){
