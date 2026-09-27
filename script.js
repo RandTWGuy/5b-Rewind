@@ -25,8 +25,7 @@
 	//--------------------------------------------------------------------------------------------------------------------------------
 	
 	// Initialize vars
-    //List of 5b-ers' data.
-	import { FiveBerData } from './data.js';
+    //List of 5b-ers' data is already done from data.js
     const player_count = FiveBerData.length;
 	let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
