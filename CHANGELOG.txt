@@ -1,7 +1,8 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 50/250; 20% completed)
+- Collect data from actual runners. (Currently: 5 runners and their 50/250runs; 20% completed)
+(Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
 2026/9/27:
 Work Time: 1.5hr
