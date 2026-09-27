@@ -4,9 +4,12 @@ TODO:
 - Collect data from actual runners. (Currently: 50/250; 20% completed)
 
 2026/9/27:
-Work Time: 5mins (lol)
+Work Time: 30mins
 - Added Yariktopikser's data!
 - Made default slider date today instead of 2018-11-02. (Finally!)
+- Wrote the README file!
+- Moved the FiveBersData array-in-array-in-array-in-array to another file, data.js.
+
 
 2026/9/26:
 Work Time: 4hrs
