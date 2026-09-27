@@ -5,8 +5,9 @@ TODO:
 - Collect data from actual runners.
 
 2026/9/27:
-Work Time: 1min (lol)
+Work Time: 5mins (lol)
 - Added Yariktopikser's data!
+- Made default slider date today instead of 2018-11-02. (Finally!)
 
 2026/9/26:
 Work Time: 4hrs
