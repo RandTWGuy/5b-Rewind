@@ -4,7 +4,7 @@ TODO:
 - Collect data from actual runners. (Currently: 50/250; 20% completed)
 
 2026/9/27:
-Work Time: 1hr
+Work Time: 1.5hr
 - Added Yariktopikser's data!
 - Made default slider date today instead of 2018-11-02. (Finally!)
 - Released v0.1.3
