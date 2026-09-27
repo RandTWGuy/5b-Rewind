@@ -134,7 +134,7 @@
     let curr_center_y;
     
 	//Text style
-	ctx.font = "12px Arial";
+	ctx.font = "14px Arial";
 	ctx.textAlign = "center";
     
 	
