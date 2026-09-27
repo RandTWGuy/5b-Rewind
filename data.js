@@ -13,7 +13,7 @@
 	]
 	*/
 	//Each player must have at least one run
-    export const FiveBerData = 
+    const FiveBerData = 
       [
 		  [
 			  'me, the dev',
