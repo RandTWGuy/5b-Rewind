@@ -111,6 +111,12 @@
 				  [1786147200000,488283],
 				  [1786492800000,479283]
 			  ]
+		  ],
+		  [
+			  'Yariktopikser',
+			  [
+				  [1790380800000,853667]
+			  ]
 		  ]
 	  ];
     const player_count = FiveBerData.length;
