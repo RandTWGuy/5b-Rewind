@@ -1,8 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Make default slider date today instead of 2018-11-02.
-- Collect data from actual runners.
+- Collect data from actual runners. (Currently: 50/250; 20% completed)
 
 2026/9/27:
 Work Time: 5mins (lol)
