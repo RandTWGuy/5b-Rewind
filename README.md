@@ -5,7 +5,7 @@ When the user picks a date via the slider, the canvas will display the Personal 
 ## Note on AI usage:
 No line of code in this repository was directly written by Artificial Intelligence (AI). However, I have used AIs to debug my code and provide alternatives to an extent; yet the first version of code was entirely written by myself and not AIs.
 
-##Special Thanks:
+## Special Thanks:
 To my CS teacher, for inspiring me to make my own website;
 To the writer(s) of the book "Big Fat Notebook: Everything you need to ace Computer Science and Coding in one big fat notebook", which taught me HTML and CSS back in 2025;
 To the many introduction-to-JS tutorials on the internet, which assisted me when I first started this project and first used JS;
