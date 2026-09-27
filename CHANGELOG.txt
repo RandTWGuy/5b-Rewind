@@ -7,6 +7,7 @@ TODO:
 Work Time: 1hr
 - Added Yariktopikser's data!
 - Made default slider date today instead of 2018-11-02. (Finally!)
+- Released v0.1.3
 - Wrote the README file!
 - Moved the FiveBersData array-in-array-in-array-in-array to another file, data.js.
 - Fixed a bug that the above caused.
@@ -23,6 +24,7 @@ Work Time: 4hrs
 - Added colors for 1st, 2nd, 3rd placers.
 - Added Numbly's data!
 - Added Korzen's data! (srsly this took up the most boring 30 minutes in my life why do you have so many runs)
+- Released v0.1.2
 
 2026/9/25:
 Work Time: 4.5hrs
