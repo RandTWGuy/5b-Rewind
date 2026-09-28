@@ -1,18 +1,19 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 5 runners (plus incomplete Meester data) and their 5X/250runs; 20% completed)
+- Collect data from actual runners. (Currently: 6 runners (plus incomplete Meester data) and their 73/250runs; 29.2% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
 2026/9/28: 
-Work Time: 0.5 hours
+Work Time: 1hr
 - OMG I literally just woke up and KorZen DMed me saying that he'll share this on the discord? Thanks a googol!
 - Released v0.2.1!
-- Added about 5-6 of Meester's runs. (Not all)
+- Added 5 of Meester's runs. (Not all)
+- Added AntLadder's data! (18 runs)
 
 2026/9/27:
 Work Time: 1.5hr
-- Added Yariktopikser's data!
+- Added Yariktopikser's data! (1 run)
 - Made default slider date today instead of 2018-11-02. (Finally!)
 - Released v0.1.3
 - Wrote the README file!
@@ -22,15 +23,15 @@ Work Time: 1.5hr
 
 2026/9/26:
 Work Time: 4hrs
-- Added DraYoshi's data!
+- Added DraYoshi's data! (5 runs)
 - Fixed bug/unintended behavior where the blocks do not show up until you move the slider, by loading the main function once before the slider move detection. This caused even more bugs, which I also fixed.
 - Fixed bug with DraYoshi's data (I forgot to close an array)
 - Displays formatted mm:ss:xxx time instead of milliseconds. If no run yet, shows "NO RUN YET".
 - Ensured leading zeros in the sec and ms fields of the time. Fixed a bug with this's implementation.
 - Sorted the runs by time instead of player name. (This took so long)
 - Added colors for 1st, 2nd, 3rd placers.
-- Added Numbly's data!
-- Added Korzen's data! (srsly this took up the most boring 30 minutes in my life why do you have so many runs)
+- Added Numbly's data! (17 runs)
+- Added Korzen's data! (26 runs; srsly this took up the most boring 30 minutes in my life why do you have so many runs)
 - Released v0.1.2
 
 2026/9/25:
