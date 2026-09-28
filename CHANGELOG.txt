@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 6 runners (plus incomplete Meester data) and their 74/251 runs; 29.5% completed)
+- Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 87/251 runs; 34.6% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
 2026/9/28: 
@@ -13,6 +13,7 @@ Work Time: 1.5hr
 - Added Yariktopikser's new run
 - Banned Yariktopikser b/c he got a sub-6 Match (for a prank/joke, ig)
 - Revised README.md
+- Added 1000%'s data! (13 runs)
 
 2026/9/27:
 Work Time: 1.5hr
