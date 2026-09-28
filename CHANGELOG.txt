@@ -1,13 +1,14 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 5 runners and their 50/250runs; 20% completed)
+- Collect data from actual runners. (Currently: 5 runners (plus incomplete Meester data) and their 5X/250runs; 20% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
 2026/9/28: 
-Work Time: 
+Work Time: 0.5 hours
 - OMG I literally just woke up and KorZen DMed me saying that he'll share this on the discord? Thanks a googol!
 - Released v0.2.1!
+- Added about 5-6 of Meester's runs. (Not all)
 
 2026/9/27:
 Work Time: 1.5hr
