@@ -4,13 +4,18 @@ TODO:
 - Collect data from actual runners. (Currently: 5 runners and their 50/250runs; 20% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
+2026/9/28: 
+Work Time: 
+- OMG I literally just woke up and KorZen DMed me saying that he'll share this on the discord? Thanks a googol!
+- Released v0.2.1!
+
 2026/9/27:
 Work Time: 1.5hr
 - Added Yariktopikser's data!
 - Made default slider date today instead of 2018-11-02. (Finally!)
 - Released v0.1.3
 - Wrote the README file!
-- Moved the FiveBersData array-in-array-in-array-in-array to another file, data.js.
+- Moved the FiveBerData array-in-array-in-array-in-array to another file, data.js.
 - Fixed a bug that the above caused.
 
 
