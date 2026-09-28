@@ -5,13 +5,14 @@ TODO:
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four)
 
 2026/9/28: 
-Work Time: 1hr
+Work Time: 1.5hr
 - OMG I literally just woke up and KorZen DMed me saying that he'll share this on the discord? Thanks a googol!
 - Released v0.2.1!
 - Added 5 of Meester's runs. (Not all)
 - Added AntLadder's data! (18 runs)
 - Added Yariktopikser's new run
 - Banned Yariktopikser b/c he got a sub-6 Match (for a prank/joke, ig)
+- Revised README.md
 
 2026/9/27:
 Work Time: 1.5hr
