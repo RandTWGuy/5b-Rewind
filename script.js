@@ -1,7 +1,10 @@
 	// canvas dimensions (update manually with the canvas!)
     let canvas_x = 750;
     let canvas_y = 750;
-    
+
+	// profile pic opacity & margin PROPORTION
+	let img_opacity = 0.6;
+	let img_margin = 0.1
     // Margin
     let margin_x = 25;
     let margin_y = 25;
@@ -28,7 +31,6 @@
     //List of 5b-ers' data is already done from data.js
     const player_count = FiveBerData.length;
 	let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
-	//Do we need the player tab in curr_PRs? Best if we keep it, think about removing it.
 	
     //current x/y block number
     let curr_x_block;
@@ -74,9 +76,10 @@
   		display.textContent = formatted_date;
 
 		const curr_PRs = structuredClone(FiveBerData);
-		//Will turn into [[player1,PR1],[player2,PR2]] eventually
-		//need player names 'cause we're gonna sort this thing in order
-		//Calculate everyone's PRs at this time
+		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
+		// what was profile pic links will remain profile pic links
+		// need player names 'cause we're gonna sort this thing in order
+		// Calculate everyone's PRs at this time
 		for (let i = 0; i < player_count; i++){
 			//list of runs (timestamp+PR)
 			player_data = FiveBerData[i][1];
@@ -125,10 +128,30 @@
 			}
 			//draw rect
       		ctx.fillRect(rect_x,rect_y,block_x,block_y);
-      		
+
+			// semi-opaque profile pic
+			// if there is a profile pic:
+			if (curr_PRs[i].length == 3){
+				const profile_img = new Image();
+				profile_img.src = curr_PRs[i][2]; // Get profile picture URL from data
+				
+				profile_img.onload = function() {
+  					ctx.globalAlpha = img_opacity;
+  					// Draw image centered on the block
+  					ctx.drawImage(
+    					profileImg,
+    					rect_x + (img_margin * block_x),           // x offset (img_margin of a block)
+    					rect_y + (img_margin * block_x),           // y offset (ditto)
+    					(1 - 2 * img_margin) * block_x,          // width
+    					(1 - 2 * img_margin) * block_y          // height
+  					);
+  					// Reset opacity back to full
+  					ctx.globalAlpha = 1.0;
+				};
+			}
+			
 	  		//Text color
       		ctx.fillStyle = "#000000";//black
-      		
 			//Calculate center of block
       		curr_center_x = rect_x + (block_x / 2);
 			curr_center_y = rect_y + (block_y / 2);
@@ -159,6 +182,7 @@
 			//Display text
 			ctx.textBaseline = "center";
 			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 4));
+			
     	}
 	}
 
