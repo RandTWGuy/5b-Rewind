@@ -3,7 +3,8 @@
 	[
 	[player1,[
 	[Date1,PR1],[Date2,PR2],[Data3,PR3]
-	]],
+	],
+	(maybe) profile pic link],
 	[player2,[
 	[Date1,PR1],[Date2,PR2],[Data3,PR3]
 	]],
@@ -83,7 +84,8 @@
 				  [1745971200000,509067],
 				  [1786147200000,488283],
 				  [1786492800000,479283]
-			  ]
+			  ],
+			  "https://www.speedrun.com/static/user/98r9gpw8/image.jpg"
 		  ],
 		  // banned until 10/01/2026
 		  // [
