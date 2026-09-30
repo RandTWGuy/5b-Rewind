@@ -4,7 +4,8 @@
 
 	// profile pic opacity & margin PROPORTION
 	let img_opacity = 0.6;
-	let img_margin = 0.1
+	let img_margin = 0.1;
+
     // Margin
     let margin_x = 25;
     let margin_y = 25;
@@ -139,7 +140,7 @@
   					ctx.globalAlpha = img_opacity;
   					// Draw image centered on the block
   					ctx.drawImage(
-    					profileImg,
+    					profile_img,
     					rect_x + (img_margin * block_x),           // x offset (img_margin of a block)
     					rect_y + (img_margin * block_x),           // y offset (ditto)
     					(1 - 2 * img_margin) * block_x,          // width
