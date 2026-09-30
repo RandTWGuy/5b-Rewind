@@ -47,7 +47,17 @@
 	ctx.font = "14px Arial";
 	ctx.textAlign = "center";
     
-	
+	// Pre-load all profile images
+	const pre_load_imgs = {};
+	for (let i = 0; i < player_count; i++) {
+  		if (FiveBerData[i].length == 3) {
+    		const img = new Image();
+    		img.src = FiveBerData[i][2];
+    		pre_load_imgs[FiveBerData[i][0]] = img; // Store by player name
+  		}
+	}
+
+
 	// The slider and it's updates
 	// Start and End Dates
 	const start_date = new Date('2018-11-02T00:00:00Z');
@@ -132,28 +142,21 @@
 
 			// semi-opaque profile pic
 			// if there is a profile pic:
-			if (curr_PRs[i].length == 3){
-				const profile_img = new Image();
-				profile_img.src = curr_PRs[i][2]; // Get profile picture URL from data
-
-				//localize rect position vars
-				const draw_x = rect_x;
-				const draw_y = rect_y;
-				
-				profile_img.onload = function() {
-  					ctx.globalAlpha = img_opacity;
-					
-  					// Draw image centered on the block
-  					ctx.drawImage(
-    					profile_img,
-    					rect_x + (img_margin * block_x),           // x offset (img_margin of a block)
-    					rect_y + (img_margin * block_y),           // y offset (ditto)
-    					(1 - 2 * img_margin) * block_x,          // width
-    					(1 - 2 * img_margin) * block_y          // height
-  					);
-  					// Reset opacity back to full
-  					ctx.globalAlpha = 1.0;
-				};
+			if (curr_PRs[i].length == 3 && pre_load_imgs[curr_PRs[i][0]]) {
+  			const profile_img = pre_load_imgs[curr_PRs[i][0]];
+ 			 
+  				// Only draw if the image is already loaded
+  				if (profile_img.complete) {
+    				ctx.globalAlpha = img_opacity;
+    				ctx.drawImage(
+      					profile_img,
+      					rect_x + (img_margin * block_x),           // x offset
+      					rect_y + (img_margin * block_y),           // y offset
+      					(1 - 2 * img_margin) * block_x,            // width
+      					(1 - 2 * img_margin) * block_y             // height
+    					);
+    				ctx.globalAlpha = 1.0;
+  				}
 			}
 			
 	  		//Text color
