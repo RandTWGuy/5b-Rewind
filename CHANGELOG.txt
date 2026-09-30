@@ -10,6 +10,7 @@ TODO:
 Work Time: 0.5 hrs
 - Github is normal again! Hooray!
 - KorZen's profile pic is on top of whoever's last place. (bug)
+- Fixed the bug by pre-loading profile pics
 
 2026/9/29:
 Work Time: 1hr
