@@ -4,13 +4,12 @@ TODO:
 - Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 87/251 runs; 34.6% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 - Make data.js and FiveBerData more human-readable and maintainable, by adding date-to-timestamp and mm:ss.xxx-to-raw ms codes in data.js
-- Fix profile pic bug
 
 2026/9/30:
-Work Time: 0.5 hrs
+Work Time: 1hr
 - Github is normal again! Hooray!
 - KorZen's profile pic is on top of whoever's last place. (bug)
-- Fixed the bug by pre-loading profile pics
+- Fixed the bug by pre-loading profile pics (This causes another "bug" where the pics don't show up until after the slider is moved, but I'm not sure what I think about that yet -- might make it intended behavior sometime in the future)
 
 2026/9/29:
 Work Time: 1hr
