@@ -6,11 +6,13 @@ TODO:
 - Make data.js and FiveBerData more human-readable and maintainable, by adding date-to-timestamp and mm:ss.xxx-to-raw ms codes in data.js
 
 2026/9/30:
-Work Time: 1hr
+Work Time: 2hrs
 - Github is normal again! Hooray!
 - KorZen's profile pic is on top of whoever's last place. (bug)
 - Fixed the bug by pre-loading profile pics (This causes another "bug" where the pics don't show up until after the slider is moved, but I'm not sure what I think about that yet -- might make it intended behavior sometime in the future)
 - Added Numbly and 1000%'s profile pics.
+- Made FiveBerData more human-readable & maintainable & debuggable, by making the array first hold yyyy-mm-dd and mm:ss.xxx, before changing it to UNIX and raw ms w/ code. This means that I have to comment out all data in the old format.
+- Re-added me, DraYoshi, and Numbly's data in the new format.
 
 2026/9/29:
 Work Time: 1hr
