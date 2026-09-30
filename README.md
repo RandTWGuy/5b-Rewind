@@ -8,7 +8,7 @@ Next, in *script.js*, this array is processed to show the "current" PRs of each 
 Once the PRs of everybody are determined, they are sorted and displayed.
 
 ## Note on AI usage:
-No line of code in this repository was directly written by Artificial Intelligence (AI). However, I have used AIs to debug my code and provide alternatives to an extent; yet the first version of code was entirely written by myself and not AIs.\
+No line of code in this repository was directly written by Artificial Intelligence (AI). However, I have used AIs to debug my code (especially typos) and provide alternatives to an extent; yet the first version of code was entirely written by myself and not AIs.\
 However, I need the time, in milliseconds, to load into *data.js* manually. Since I could not find a mm-ss-xxx to millisecond converter online, I had to resort to asking AI. However, since the AI just writes code to calculate in the back-end, and nothing else, I believe that this qualifies as fair use. 
 
 ## Special Thanks:
