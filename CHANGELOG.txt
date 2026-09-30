@@ -3,10 +3,12 @@ CHANGELOG FOR 5B REWIND
 TODO:
 - Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 87/251 runs; 34.6% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
+- Make data.js and FiveBerData more human-readable and maintainable, by adding date-to-timestamp and mm:ss.xxx-to-raw ms codes in data.js
 
 2026/9/29:
-Work Time: 0.5hr
+Work Time: 1hr
 - Added KorZen's profile pic & the profile pic code
+- Github is weird today; I can't re-deploy my page, so the page is stuck in 9/28
 
 2026/9/28: 
 Work Time: 2hrs
