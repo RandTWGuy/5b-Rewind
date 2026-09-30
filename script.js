@@ -138,11 +138,16 @@
 				
 				profile_img.onload = function() {
   					ctx.globalAlpha = img_opacity;
+
+					//localize changing vars
+					const draw_x = rect_x;
+					const draw_y = rect_y;
+					
   					// Draw image centered on the block
   					ctx.drawImage(
     					profile_img,
     					rect_x + (img_margin * block_x),           // x offset (img_margin of a block)
-    					rect_y + (img_margin * block_x),           // y offset (ditto)
+    					rect_y + (img_margin * block_y),           // y offset (ditto)
     					(1 - 2 * img_margin) * block_x,          // width
     					(1 - 2 * img_margin) * block_y          // height
   					);
