@@ -167,9 +167,9 @@ for (let i = 0; i < FiveBerData.length; i++){
 
 		//human-readable runtime
 		let run_time = player_runs[j][1];
-		let min = Number(run_time.Split(':')[0]);
-		let sec = Number(run_time.Split(':')[1].Split('.')[0]);
-		let ms = Number(run_time.Split('.')[1]);
+		let min = Number(run_time.split(':')[0]);
+		let sec = Number(run_time.split(':')[1].split('.')[0]);
+		let ms = Number(run_time.split('.')[1]);
 
 		//computer-readable runtime
 		player_runs[j][1] = min*60000 + sec*1000 + ms;
