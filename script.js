@@ -135,13 +135,13 @@
 			if (curr_PRs[i].length == 3){
 				const profile_img = new Image();
 				profile_img.src = curr_PRs[i][2]; // Get profile picture URL from data
+
+				//localize rect position vars
+				const draw_x = rect_x;
+				const draw_y = rect_y;
 				
 				profile_img.onload = function() {
   					ctx.globalAlpha = img_opacity;
-
-					//localize changing vars
-					const draw_x = rect_x;
-					const draw_y = rect_y;
 					
   					// Draw image centered on the block
   					ctx.drawImage(
