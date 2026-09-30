@@ -10,6 +10,7 @@ Work Time: 1hr
 - Github is normal again! Hooray!
 - KorZen's profile pic is on top of whoever's last place. (bug)
 - Fixed the bug by pre-loading profile pics (This causes another "bug" where the pics don't show up until after the slider is moved, but I'm not sure what I think about that yet -- might make it intended behavior sometime in the future)
+- Added Numbly and 1000%'s profile pics.
 
 2026/9/29:
 Work Time: 1hr
