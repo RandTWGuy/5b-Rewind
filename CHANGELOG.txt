@@ -5,7 +5,7 @@ TODO:
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 2026/10/01：
-Work Time: 1hr
+Work Time: 1.5hrs
 - Re-added Yariktopikser's data in the new format (he's unbanned today)
 - Added Yariktopikser's profile pic.
 - Re-added AntLadder's data in the new format
@@ -13,6 +13,7 @@ Work Time: 1hr
 - Moved player name and time text to the very top/bottom of the block
 - Increased profile pic opacity from 0.6 to 0.8. Doesn't make alot of sense for it to be so transparent after the text moved away.
 - Re-added 1000%'s data in the new format
+- Added JJJ's data! (the first data-addition in three days; also I love the new format it's 1000% better than UNIX and raw ms)
 
 2026/9/30:
 Work Time: 2.5hrs
