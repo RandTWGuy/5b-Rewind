@@ -5,7 +5,7 @@ TODO:
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 2026/10/01：
-Work Time: 0.5hrs
+Work Time: 1hr
 - Re-added Yariktopikser's data in the new format (he's unbanned today)
 - Added Yariktopikser's profile pic.
 - Re-added AntLadder's data in the new format
