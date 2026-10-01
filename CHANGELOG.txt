@@ -1,8 +1,9 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 88/251 runs; 35.0% completed)
+- Collect data from actual runners. (Currently: 9 runners (plus incomplete Meester data) and their 106/251 runs; 42.2% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
+- Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
 2026/10/01：
 Work Time: 1.5hrs
@@ -13,7 +14,8 @@ Work Time: 1.5hrs
 - Moved player name and time text to the very top/bottom of the block
 - Increased profile pic opacity from 0.6 to 0.8. Doesn't make alot of sense for it to be so transparent after the text moved away.
 - Re-added 1000%'s data in the new format
-- Added JJJ's data! (the first data-addition in three days; also I love the new format it's 1000% better than UNIX and raw ms)
+- Added JJJ's data! (14 runs; the first data-addition in three days; also I love the new format it's 1000% better than UNIX and raw ms)
+- Added ItsMarker's data! (4 runs)
 
 2026/9/30:
 Work Time: 2.5hrs
