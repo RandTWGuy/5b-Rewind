@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 9 runners (plus incomplete Meester data) and their 106/251 runs; 42.2% completed)
+- Collect data from actual runners. (Currently: 10 runners (plus incomplete Meester data) and their 110/251 runs; 43.8% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 - Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
@@ -16,6 +16,7 @@ Work Time: 1.5hrs
 - Re-added 1000%'s data in the new format
 - Added JJJ's data! (14 runs; the first data-addition in three days; also I love the new format it's 1000% better than UNIX and raw ms)
 - Added ItsMarker's data! (4 runs)
+- Added Ader's data! (4 runs)
 
 2026/9/30:
 Work Time: 2.5hrs
