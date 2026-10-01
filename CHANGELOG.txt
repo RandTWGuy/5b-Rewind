@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 87/251 runs; 34.6% completed)
+- Collect data from actual runners. (Currently: 7 runners (plus incomplete Meester data) and their 88/251 runs; 35.0% completed)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 2026/10/01：
