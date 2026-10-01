@@ -4,7 +4,7 @@
 
 	// profile pic opacity & margin PROPORTION
 	let img_opacity = 0.6;
-	let img_margin = 0.1;
+	let img_margin = 0.15;
 
     // Margin
     let margin_x = 25;
@@ -165,8 +165,8 @@
       		curr_center_x = rect_x + (block_x / 2);
 			curr_center_y = rect_y + (block_y / 2);
 			//Player name text
-			ctx.textBaseline = "center";
-      		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 4));
+			ctx.textBaseline = "top";
+      		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 2));
 			
 			//PR time text
 			let text;
@@ -189,8 +189,8 @@
 				text = `${PR_min}:${PR_sec}.${PR_ms}`;
 			}
 			//Display text
-			ctx.textBaseline = "center";
-			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 4));
+			ctx.textBaseline = "bottom";
+			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
 			
     	}
 	}
