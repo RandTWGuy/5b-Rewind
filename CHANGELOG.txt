@@ -9,6 +9,8 @@ Work Time: 0.5hrs
 - Re-added Yariktopikser's data in the new format (he's unbanned today)
 - Added Yariktopikser's profile pic.
 - Re-added AntLadder's data in the new format
+- Increased profile pic margin from 0.1 of a block to 0.15 of a block (15 px)
+- Moved player name and time text to the very top/bottom of the block
 
 2026/9/30:
 Work Time: 2.5hrs
