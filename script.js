@@ -3,7 +3,7 @@
     let canvas_y = 750;
 
 	// profile pic opacity & margin PROPORTION
-	let img_opacity = 0.6;
+	let img_opacity = 0.8;
 	let img_margin = 0.15;
 
     // Margin
