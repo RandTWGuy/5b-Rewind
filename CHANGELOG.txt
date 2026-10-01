@@ -7,6 +7,7 @@ TODO:
 2026/10/01：
 Work Time: 0.5hrs
 - Re-added Yariktopikser's data in the new format (he's unbanned today)
+- Added Yariktopikser's profile pic.
 
 2026/9/30:
 Work Time: 2.5hrs
