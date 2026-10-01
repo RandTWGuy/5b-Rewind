@@ -96,7 +96,8 @@
 			  [
 				  ["2026-09-26","14:13.667"],
 				  ["2026-09-28","13:02.100"]
-			  ]
+			  ],
+			  "https://www.speedrun.com/static/user/jm641n48/image.png"
 		  ]//,
 		  // // No full data until Meester responds to my DM
 		  // // [
