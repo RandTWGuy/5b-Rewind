@@ -181,6 +181,16 @@
 				  ["2026-04-19","10:29.517"]
 			  ],
 			  "https://www.speedrun.com/static/user/8vy7moy8/image.jpg"
+		  ],
+		  [
+			  'ader_farewell',
+			  [
+				  ["2026-03-05","13:47.017"],
+				  ["2026-03-08","12:20.317"],
+				  ["2026-04-06","11:52.433"],
+				  ["2026-07-22","10:56.333"]
+			  ],
+			  "https://www.speedrun.com/static/user/j5gwd5w8/image.jpg"
 		  ]
 	  ];
 
