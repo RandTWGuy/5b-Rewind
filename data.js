@@ -90,15 +90,14 @@
 				  ["2026-08-12","7:59.283"]
 			  ],
 			  "https://www.speedrun.com/static/user/98r9gpw8/image.jpg"
+		  ],
+		  [
+			  'Yariktopikser',
+			  [
+				  ["2026-09-26","14:13.667"],
+				  ["2026-09-28","13:02.100"]
+			  ]
 		  ]//,
-		  // // banned until 10/01/2026
-		  // // [
-			 // //  'Yariktopikser',
-			 // //  [
-				// //   [1790380800000,853667],
-				// //   [1790553600000,782100]
-			 // //  ]
-		  // // ],
 		  // // No full data until Meester responds to my DM
 		  // // [
 			 // //  'MeesterTweester',
