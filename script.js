@@ -144,7 +144,8 @@
 			// if there is a profile pic:
 			if (curr_PRs[i].length == 3 && pre_load_imgs[curr_PRs[i][0]]) {
   			const profile_img = pre_load_imgs[curr_PRs[i][0]];
- 			 
+ 			//Do not crop un-proportionally
+			profile_img.style.objectFit = 'cover';
   				// Only draw if the image is already loaded
   				if (profile_img.complete) {
     				ctx.globalAlpha = img_opacity;
