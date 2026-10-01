@@ -12,6 +12,7 @@ Work Time: 1hr
 - Increased profile pic margin from 0.1 of a block to 0.15 of a block (15 px)
 - Moved player name and time text to the very top/bottom of the block
 - Increased profile pic opacity from 0.6 to 0.8. Doesn't make alot of sense for it to be so transparent after the text moved away.
+- Re-added 1000%'s data in the new format
 
 2026/9/30:
 Work Time: 2.5hrs
