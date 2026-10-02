@@ -11,6 +11,7 @@ TODO:
 2026/10/02:
 Work Time: 0.5hrs
 - Added DwarfWizard's data! (16 runs)
+- Released v0.2.3!
 - Added Trevarity's data! (4 runs)
 - Added coppersalts' data! (5 runs)
 - Added MythicalRocket's data! (2 runs)
