@@ -8,6 +8,10 @@ TODO:
 
 - Maybe, use the length of bars to represent time. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/03:
+Work Time: 5 mins
+- Added DraYoshi's pfp
+
 2026/10/02:
 Work Time: 0.5hrs
 - Added DwarfWizard's data! (16 runs)
