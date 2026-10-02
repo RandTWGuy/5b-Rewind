@@ -12,7 +12,7 @@ TODO:
 Work Time: 0.5hrs
 - Added DwarfWizard's data! (16 runs)
 - Added Trevarity's data! (4 runs)
-- Added coppersalt's data! (5 runs)
+- Added coppersalts' data! (5 runs)
 
 2026/10/01：
 Work Time: 1.5hrs
