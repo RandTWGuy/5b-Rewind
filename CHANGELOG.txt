@@ -16,6 +16,7 @@ Work Time: 1hr
 - Made canvas only draw the amount of players that actually fit, so don't waste time drawing out-of-bounds players. (Now the canvas can only fit 18 people, which some will call selfish b/c I'm 17th in the world, but hey, I don't care)
 - Added MyShuckle's data! (11 runs)
 - Added meanietweezie's data! (6 runs)
+- Updated Yariktopikser's pfp
 
 2026/10/02:
 Work Time: 0.5hrs
