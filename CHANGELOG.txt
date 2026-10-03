@@ -13,6 +13,7 @@ Work Time: 0.5hrs
 - Added DraYoshi's pfp
 - Made canvas_x and canvas_y auto-update with the canvas.
 - Changed canvas height from 750 to 390. This suits computer screens better but makes it terrible for iPhone. I mean, 5b is a PC/Desktop browser game, so why wouldn't you be using a computer?
+- Made canvas only draw the amount of players that actually fit, so don't waste time drawing out-of-bounds players. (Now the canvas can only fit 18 people, which some will call selfish b/c I'm 17th in the world, but hey, I don't care)
 
 2026/10/02:
 Work Time: 0.5hrs
