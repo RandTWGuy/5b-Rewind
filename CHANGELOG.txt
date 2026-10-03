@@ -18,6 +18,7 @@ Work Time: 1hr
 - Added meanietweezie's data! (6 runs)
 - Updated Yariktopikser's pfp
 - Added CloverDrop's data! (9 runs; finally I'm not in last place!)
+- Released v0.2.4!
 
 2026/10/02:
 Work Time: 0.5hrs
