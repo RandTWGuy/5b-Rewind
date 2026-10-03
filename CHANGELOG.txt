@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 15 runners (plus incomplete Meester data) and their 148/251 runs; 59.0% completed)
+- Collect data from actual runners. (Currently: 15 runners (plus incomplete Meester data) and their 149/251 runs; 59.3% completed; Meester data is not included in the percentage numerator, only the denominator)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 - Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
@@ -9,12 +9,13 @@ TODO:
 - Maybe, use the length of bars to represent time. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/03:
-Work Time: 0.5hrs
+Work Time: 1hr
 - Added DraYoshi's pfp
 - Made canvas_x and canvas_y auto-update with the canvas.
 - Changed canvas height from 750 to 390. This suits computer screens better but makes it terrible for iPhone. I mean, 5b is a PC/Desktop browser game, so why wouldn't you be using a computer?
 - Made canvas only draw the amount of players that actually fit, so don't waste time drawing out-of-bounds players. (Now the canvas can only fit 18 people, which some will call selfish b/c I'm 17th in the world, but hey, I don't care)
 - Added MyShuckle's data! (11 runs)
+- Added meanietweezie's data! (6 runs)
 
 2026/10/02:
 Work Time: 0.5hrs
