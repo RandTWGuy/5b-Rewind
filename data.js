@@ -258,6 +258,17 @@
 				  ["2026-06-25","13:47.000"]//This run is actually millisecond-perfect
 			  ],
 			  "https://www.speedrun.com/static/user/j0ey3dm8/image.png"
+		  ],
+		  [
+			  'meanietweezie',
+			  [
+				  ["2025-03-15","25:43.683"],
+				  ["2025-03-16","23:01.400"],
+				  ["2025-03-20","18:43.267"],
+				  ["2025-03-27","18:25.117"],
+				  ["2025-03-28","17:01.633"],
+				  ["2025-05-18","16:12.000"]//I trust that KorZen verified this after retiming the millisecond
+			  ]
 		  ]
 	  ];
 
