@@ -1,6 +1,6 @@
-	// canvas dimensions (update manually with the canvas!)
-    let canvas_x = 750;
-    let canvas_y = 750;
+	// canvas dimensions
+    let canvas_x = canvas.width;
+    let canvas_y = canvas.height;
 
 	// profile pic opacity & margin PROPORTION
 	let img_opacity = 0.8;
