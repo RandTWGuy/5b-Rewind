@@ -115,7 +115,7 @@
 		//sort curr_PRs by time, sorting the player names with them
 		curr_PRs.sort((a,b) => a[1] - b[1])
 		// Loop through everybody
-    	for (let i = 0; i < min(player_count, x_blocks * y_blocks); i++){
+    	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
       		//Calculate x_block and y_block coordinates
       		//0-indexed
       		curr_x_block = i % x_blocks;
