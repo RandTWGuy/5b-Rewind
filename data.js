@@ -293,7 +293,7 @@
 			  "https://www.speedrun.com/static/user/8dpy0298/image.png"
 		  ],
 		  [
-			  'The_Gamer_Pug',
+			  'Gamer_Pug',
 			  [
 				  ["2026-08-21","30:09.533"],
 				  ["2026-08-22","25:53.833"],
