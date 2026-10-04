@@ -14,6 +14,7 @@ Work Time: 0.5hrs
 - Added Matvei's data! (1 run)
 - Increased canvas height from 390 to 510 px. Now it can fit 6x4 = 24 runners.
 - Added Pug's data! (6 runs)
+- Fixed CloverDrop's data. I swapped two same-day runs.
 
 2026/10/03:
 Work Time: 1hr
