@@ -331,6 +331,14 @@
 				  ["2025-09-28","19:42.033"]
 			  ],
 			  "https://www.speedrun.com/static/user/x31mp228/image.png"
+		  ],
+		  [
+			  'Fma435',
+			  [
+				  ["2024-03-28","20:06.250"],
+				  ["2024-04-10","20:06.000"],//dubious, as fma435 does have submitted non-PR runs, so idk if this was timed to the ms
+			  ],
+			  "https://www.speedrun.com/static/user/j2q9l7oj/image.png"
 		  ]
 	  ];
 
