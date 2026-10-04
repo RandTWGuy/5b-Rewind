@@ -339,6 +339,12 @@
 				  ["2024-04-10","20:06.000"],//dubious, as fma435 does have submitted non-PR runs, so idk if this was timed to the ms
 			  ],
 			  "https://www.speedrun.com/static/user/j2q9l7oj/image.png"
+		  ],
+		  [
+			  'iPackle',
+			  [
+				  ["2024-03-21","20:31.048"]
+			  ]
 		  ]
 	  ];
 
