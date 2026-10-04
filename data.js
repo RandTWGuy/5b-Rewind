@@ -288,7 +288,7 @@
 		  [
 			  'MatveiYT012',
 			  [
-				  ["2026-08-01","18:12:617"]
+				  ["2026-08-01","18:12.617"]
 			  ],
 			  "https://www.speedrun.com/static/user/8dpy0298/image.png"
 		  ]
