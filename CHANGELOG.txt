@@ -12,6 +12,7 @@ TODO:
 Work Time: 0.5hrs
 - Sorted FiveBerData by player's first run's time. This fixes the unintended behavior of run-less players' blocks moving around when a player does their first run.
 - Added Matvei's data! (1 run)
+- Increased canvas height from 390 to 510 px. Now it can fit 6x4 = 24 runners.
 
 2026/10/03:
 Work Time: 1hr
