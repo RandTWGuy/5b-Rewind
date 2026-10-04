@@ -6,7 +6,11 @@ TODO:
 
 - Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
-- Maybe, use the length of bars to represent time. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+- Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+
+2026/10/04:
+Work Time: 0.5hrs
+- Sorted FiveBerData by player's first run's time. This fixes the unintended behavior of run-less players' blocks moving around when a player does their first run.
 
 2026/10/03:
 Work Time: 1hr
