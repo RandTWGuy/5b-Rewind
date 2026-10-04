@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 17 runners (plus incomplete Meester data) and their 158/251 runs; 62.9% completed; Meester data is not included in the percentage numerator, only the denominator)
+- Collect data from actual runners. (Currently: 19 runners (plus incomplete Meester data) and their 165/251 runs; 65.7% completed; Meester data is not included in the percentage numerator, only the denominator)
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 - Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
@@ -13,6 +13,7 @@ Work Time: 0.5hrs
 - Sorted FiveBerData by player's first run's time. This fixes the unintended behavior of run-less players' blocks moving around when a player does their first run.
 - Added Matvei's data! (1 run)
 - Increased canvas height from 390 to 510 px. Now it can fit 6x4 = 24 runners.
+- Added Pug's data! (6 runs)
 
 2026/10/03:
 Work Time: 1hr
