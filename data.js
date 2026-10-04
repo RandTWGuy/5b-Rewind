@@ -284,6 +284,13 @@
 				  ["2021-01-08","17:17.200"]
 			  ],
 			  "https://www.speedrun.com/static/user/qjow6278/image.png"
+		  ],
+		  [
+			  'MatveiYT012',
+			  [
+				  ["2026-08-01","18:12:617"]
+			  ],
+			  "https://www.speedrun.com/static/user/8dpy0298/image.png"
 		  ]
 	  ];
 
