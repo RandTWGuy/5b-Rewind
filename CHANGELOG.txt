@@ -1,7 +1,7 @@
 CHANGELOG FOR 5B REWIND
 
 TODO:
-- Collect data from actual runners. (Currently: 20 runners (plus incomplete Meester data) and their 183/250 runs; 73.2% completed; Meester data is not included in the percentage numerator, only the denominator. There are 251 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
+- Collect data from actual runners. (Currently: 20 runners (plus incomplete Meester data) and their 184/250 runs; 73.6% completed; Meester data is not included in the percentage numerator, only the denominator. There are 251 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 - Add "Time Periods", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
@@ -9,7 +9,7 @@ TODO:
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/04:
-Work Time: 1hr
+Work Time: 1.5hrs
 - Sorted FiveBerData by player's first run's time. This fixes the unintended behavior of run-less players' blocks moving around when a player does their first run.
 - Added Matvei's data! (1 run)
 - Increased canvas height from 390 to 510 px. Now it can fit 6x4 = 24 runners.
@@ -18,6 +18,7 @@ Work Time: 1hr
 - Added yyy15err's data! (10 runs)
 - Added calzcool's data! (6 runs)
 - Added Fma435's data! (2 runs; there are 3 runs on SRC, but one of them is not a Former or Current PR)
+- Added iPackle's data! (1 run)
 
 2026/10/03:
 Work Time: 1hr
