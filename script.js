@@ -7,7 +7,7 @@
 	let img_margin = 0.15;
 
 	// Rank number opacity & margin PROPORTION
-	let rank_opacity = 0.5;
+	let rank_opacity = 0.75;
 	let rank_margin = 0.1;
 	
     // Margin
