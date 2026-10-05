@@ -10,6 +10,10 @@ TODO:
 
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/05:
+Work Time: 0.5hrs
+- Added Yarik's new run. (12:43 on 10/04)
+
 2026/10/04:
 Work Time: 1.5hrs
 - Sorted FiveBerData by player's first run's time. This fixes the unintended behavior of run-less players' blocks moving around when a player does their first run.
