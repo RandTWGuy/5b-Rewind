@@ -6,6 +6,10 @@
 	let img_opacity = 0.8;
 	let img_margin = 0.15;
 
+	// Rank number opacity & margin PROPORTION
+	let rank_opacity = 0.5;
+	let rank_margin = 0.1;
+	
     // Margin
     let margin_x = 25;
     let margin_y = 25;
@@ -44,7 +48,6 @@
     let curr_center_y;
     
 	//Text style
-	ctx.font = "14px Arial";
 	ctx.textAlign = "center";
     
 	// Pre-load all profile images
@@ -155,16 +158,18 @@
       					(1 - 2 * img_margin) * block_x,            // width
       					(1 - 2 * img_margin) * block_y             // height
     					);
-    				ctx.globalAlpha = 1.0;
   				}
 			}
 			
-	  		//Text color
-      		ctx.fillStyle = "#000000";//black
+	  		//Text style
+			ctx.font = "14px Arial";
+      		ctx.fillStyle = "black";//black
+			ctx.globalAlpha = 1.0;
+			
 			//Calculate center of block
       		curr_center_x = rect_x + (block_x / 2);
 			curr_center_y = rect_y + (block_y / 2);
-			//Player name text
+			//Player name text top of block
 			ctx.textBaseline = "top";
       		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 2));
 			
@@ -188,11 +193,19 @@
 				//text
 				text = `${PR_min}:${PR_sec}.${PR_ms}`;
 			}
-			//Display text
+			
+			//Display text at the bottom of the block
 			ctx.textBaseline = "bottom";
 			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
-			
-    	}
+
+			//semisolid ranking numbers
+			//Text style
+      		ctx.fillStyle = "grey";
+			ctx.globalAlpha = rank_opacity;
+			ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
+    		//text
+			ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
+		}
 	}
 
 	//Run function once
