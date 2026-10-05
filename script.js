@@ -204,6 +204,7 @@
 			ctx.globalAlpha = rank_opacity;
 			ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
     		//text
+			ctx.textBaseline = "middle";
 			ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
 		}
 	}
