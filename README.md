@@ -19,4 +19,5 @@ To the many introduction-to-JS tutorials on the internet, which assisted me when
 And to **KorZen**, for inspiring me to speedrun BFDIA 5b and thus join this community;\
 To **Numbly**, for shocking the world (and me) in July 2026 with your 8:25 WR, which inspired me to come back to speedrunning 5b;\
 To **DraYoshi**, for being the first commentor on my 5b speedrun videos;\
-And to **Yariktopikser**, for being a great sport.
+To **Yariktopikser**, for being a great sport;
+And to the many other devoted speedrunners of BFDIA 5b, for this community is made better by you.
