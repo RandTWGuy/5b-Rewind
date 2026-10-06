@@ -25,10 +25,6 @@
     //blocks that fit per axis
     let x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
     let y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buffer_y)) + 1;
-		
-    // Drawing a rectangle over the whole canvas
-    ctx.fillStyle = '#ADD8E6';
-    ctx.fillRect(0,0,canvas_x,canvas_y);
 
 	//--------------------------------------------------------------------------------------------------------------------------------
 	
@@ -118,9 +114,11 @@
 		//sort curr_PRs by time, sorting the player names with them
 		curr_PRs.sort((a,b) => a[1] - b[1])
 		
-		//drawing time!
-		//Clear the last block
-		ctx.clearRect(0,0,canvas_x,canvas_y);
+		// drawing time!
+		// Drawing a rectangle over the whole canvas as background.
+		// In the future, add logo here
+    	ctx.fillStyle = '#ADD8E6';
+    	ctx.fillRect(0,0,canvas_x,canvas_y);
 		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
 			//only do stuff for players with runs
