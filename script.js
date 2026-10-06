@@ -46,7 +46,10 @@
     //rectangle center coordinates
     let curr_center_x;
     let curr_center_y;
-    
+
+	//global var to be used in both main functions
+	let curr_PRs;
+	
 	//Text style
 	ctx.textAlign = "center";
     
@@ -171,7 +174,7 @@
 		ctx.fillText(String(player_index + 1), curr_center_x, curr_center_y);
 	}
 
-	
+
 	//Function Code: Updating
 	function update(curr_timestamp){
   		const curr_date = new Date(curr_timestamp);
@@ -180,7 +183,7 @@
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
 
-		const curr_PRs = structuredClone(FiveBerData);
+		curr_PRs = structuredClone(FiveBerData);
 		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
 		// what was profile pic links will remain profile pic links
 		// need player names 'cause we're gonna sort this thing in order
