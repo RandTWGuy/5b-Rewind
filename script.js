@@ -117,69 +117,69 @@
 		}
 		//sort curr_PRs by time, sorting the player names with them
 		curr_PRs.sort((a,b) => a[1] - b[1])
+		
+		//drawing time!
+		//Clear the last block
+		ctx.clearRect(0,0,canvas_x,canvas_y);
 		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
-      		//Calculate x_block and y_block coordinates
-      		//0-indexed
-      		curr_x_block = i % x_blocks;
-      		curr_y_block = (i - curr_x_block)/x_blocks;
+			//only do stuff for players with runs
+      		if (curr_PRs[i][1] != 3600000){
+				//Calculate x_block and y_block coordinates
+      			//0-indexed
+      			curr_x_block = i % x_blocks;
+      			curr_y_block = (i - curr_x_block)/x_blocks;
       		
-      		//Calculate the Rectangle
-      		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
-      		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
+      			//Calculate the Rectangle
+      			rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
+      			rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
       
-      		//Clear the last block
-			ctx.clearRect(rect_x,rect_y,block_x,block_y);
-			//set color
-			if (i == 0){
-				ctx.fillStyle = 'gold';
-			} else if (i == 1){
-				ctx.fillStyle = 'silver';
-			} else if (i == 2){
-				ctx.fillStyle = 'peru';
-			} else {
-      			ctx.fillStyle = 'white';
-			}
-			//draw rect
-      		ctx.fillRect(rect_x,rect_y,block_x,block_y);
+				//set color
+				if (i == 0){
+					ctx.fillStyle = 'gold';
+				} else if (i == 1){
+					ctx.fillStyle = 'silver';
+				} else if (i == 2){
+					ctx.fillStyle = 'peru';
+				} else {
+      				ctx.fillStyle = 'white';
+				}
+				//draw rect
+      			ctx.fillRect(rect_x,rect_y,block_x,block_y);
 
-			// semi-opaque profile pic
-			// if there is a profile pic:
-			if (curr_PRs[i].length == 3 && pre_load_imgs[curr_PRs[i][0]]) {
-  			const profile_img = pre_load_imgs[curr_PRs[i][0]];
+				// semi-opaque profile pic
+				// if there is a profile pic:
+				if (curr_PRs[i].length == 3 && pre_load_imgs[curr_PRs[i][0]]) {
+  				const profile_img = pre_load_imgs[curr_PRs[i][0]];
  			
-  				// Only draw if the image is already loaded
-  				if (profile_img.complete) {
-    				ctx.globalAlpha = img_opacity;
-    				ctx.drawImage(
-      					profile_img,
-      					rect_x + (img_margin * block_x),           // x offset
-      					rect_y + (img_margin * block_y),           // y offset
-      					(1 - 2 * img_margin) * block_x,            // width
-      					(1 - 2 * img_margin) * block_y             // height
+  					// Only draw if the image is already loaded
+  					if (profile_img.complete) {
+    					ctx.globalAlpha = img_opacity;
+    					ctx.drawImage(
+      						profile_img,
+      						rect_x + (img_margin * block_x),           // x offset
+      						rect_y + (img_margin * block_y),           // y offset
+      						(1 - 2 * img_margin) * block_x,            // width
+      						(1 - 2 * img_margin) * block_y             // height
     					);
-  				}
-			}
+  					}
+				}
 			
-	  		//Text style
-			ctx.font = "14px Arial";
-      		ctx.fillStyle = "black";//black
-			ctx.globalAlpha = 1.0;
+	  			//Text style
+				ctx.font = "14px Arial";
+      			ctx.fillStyle = "black";//black
+				ctx.globalAlpha = 1.0;
 			
-			//Calculate center of block
-      		curr_center_x = rect_x + (block_x / 2);
-			curr_center_y = rect_y + (block_y / 2);
-			//Player name text top of block
-			ctx.textBaseline = "top";
-      		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 2));
-			
-			//PR time text
-			let text;
-			let PR_time = curr_PRs[i][1];
-			if (PR_time == 3600000){
-				//The PR_time is still a number for comparison purposes; 3600000 acts like infty on this scale.
-				text = "NO RUN YET";
-			} else {
+				//Calculate center of block
+      			curr_center_x = rect_x + (block_x / 2);
+				curr_center_y = rect_y + (block_y / 2);
+				//Player name text top of block
+				ctx.textBaseline = "top";
+      			ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 2));
+				
+				//PR time text
+				let text;
+				let PR_time = curr_PRs[i][1];
 				//Convert to mm:ss:xxx
 				let PR_ms = PR_time%1000;
 				PR_time = (PR_time - PR_ms)/1000;
@@ -192,14 +192,12 @@
 				
 				//text
 				text = `${PR_min}:${PR_sec}.${PR_ms}`;
-			}
-			
-			//Display text at the bottom of the block
-			ctx.textBaseline = "bottom";
-			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
+								
+				//Display text at the bottom of the block
+				ctx.textBaseline = "bottom";
+				ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
 
-			//semisolid ranking numbers only if player has run
-			if (curr_PRs[i][1] != 3600000){
+				//semisolid ranking numbers
 				//Text style
       			ctx.fillStyle = "grey";
 				ctx.globalAlpha = rank_opacity;
@@ -207,7 +205,7 @@
     			//text
 				ctx.textBaseline = "middle";
 				ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
-			}
+			}	
 		}
 	}
 
