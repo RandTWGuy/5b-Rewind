@@ -198,14 +198,16 @@
 			ctx.textBaseline = "bottom";
 			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
 
-			//semisolid ranking numbers
-			//Text style
-      		ctx.fillStyle = "grey";
-			ctx.globalAlpha = rank_opacity;
-			ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
-    		//text
-			ctx.textBaseline = "middle";
-			ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
+			//semisolid ranking numbers only if player has run
+			if (curr_PRs[i][1] != 3600000){
+				//Text style
+      			ctx.fillStyle = "grey";
+				ctx.globalAlpha = rank_opacity;
+				ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
+    			//text
+				ctx.textBaseline = "middle";
+				ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
+			}
 		}
 	}
 
