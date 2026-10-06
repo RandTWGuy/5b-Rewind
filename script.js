@@ -46,9 +46,6 @@
     //rectangle center coordinates
     let curr_center_x;
     let curr_center_y;
-
-	//global var to be used in both main functions
-	let curr_PRs;
 	
 	//Text style
 	ctx.textAlign = "center";
@@ -87,7 +84,7 @@
 	//-------------------------------------------------------------------
 
 	//Function Code: draw block and associates
-	function draw(player_index){
+	function draw(player_index,curr_PRs){
 		//Calculate x_block and y_block coordinates
       	//0-indexed
       	curr_x_block = player_index % x_blocks;
@@ -183,7 +180,7 @@
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
 
-		curr_PRs = structuredClone(FiveBerData);
+		let curr_PRs = structuredClone(FiveBerData);
 		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
 		// what was profile pic links will remain profile pic links
 		// need player names 'cause we're gonna sort this thing in order
@@ -215,7 +212,7 @@
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
       		//Only draw if player has run
 			if (curr_PRs[i][1] != 3600000){
-				draw(i);
+				draw(i,curr_PRs);
 			}
 		}
 	}
