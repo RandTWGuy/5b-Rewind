@@ -1,16 +1,21 @@
 CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
+
+1) Don't display blocks for players without runs yet (why u have a block when you're not in the community?)
+
 2) ADD MEESTER'S DATA (& Note about millisecond-less times)
 
 3) Collect data from actual runners. (Currently: 20 runners (plus incomplete Meester data) and their 185/250 runs; 74% completed; Meester data is not included in the percentage numerator, only the denominator. There are 251 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
-4) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+4) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
 
-5) Add an autoplay feature
+5) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
-6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+6) Add an autoplay feature
+
+7) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/06:
 Work Time: 0.5hrs
