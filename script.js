@@ -83,9 +83,47 @@
 
 	//-------------------------------------------------------------------
 
-	//Function Code: draw block and associates
-	function draw(player_index,curr_PRs){
-		//Calculate x_block and y_block coordinates
+	//Function Code: Updating
+	function update(curr_timestamp){
+  		const curr_date = new Date(curr_timestamp);
+  		
+  		// Output as YYYYY-MM-DD. Ignore the time.
+ 		const formatted_date = curr_date.toISOString().split('T')[0];
+  		display.textContent = formatted_date;
+
+		let curr_PRs = structuredClone(FiveBerData);
+		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
+		// what was profile pic links will remain profile pic links
+		// need player names 'cause we're gonna sort this thing in order
+		// Calculate everyone's PRs at this time
+		for (let i = 0; i < player_count; i++){
+			//list of runs (timestamp+PR)
+			player_data = FiveBerData[i][1];
+			//check if the player has a run at this time
+			//curr_player_data[0][0] is the timestamp of the first ever run
+			if (curr_timestamp < player_data[0][0]){
+				// if player doesn't have a run yet:
+				// set their PR to an 3600000, which means "NO RUN YET"
+				// so that converting to mm:ss:xxx can have an exception
+				curr_PRs[i][1] = 3600000;
+			} else {
+				// if player already has runs:
+				// keep running, from late to early runs, if run is after curr_timestamp
+				let run_index = player_data.length - 1;
+				while (curr_timestamp < player_data[run_index][0]){
+					run_index--;
+				}
+				//this run is the curr_PR.
+				curr_PRs[i][1] = player_data[run_index][1];
+			}	
+		}
+		//sort curr_PRs by time, sorting the player names with them
+		curr_PRs.sort((a,b) => a[1] - b[1])
+		// Loop through everybody and draw
+    	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
+      		//Only draw if player has run
+			if (curr_PRs[i][1] != 3600000){
+				//Calculate x_block and y_block coordinates
       	//0-indexed
       	curr_x_block = player_index % x_blocks;
       	curr_y_block = (player_index - curr_x_block)/x_blocks;
@@ -169,50 +207,6 @@
     	//text
 		ctx.textBaseline = "middle";
 		ctx.fillText(String(player_index + 1), curr_center_x, curr_center_y);
-	}
-
-
-	//Function Code: Updating
-	function update(curr_timestamp){
-  		const curr_date = new Date(curr_timestamp);
-  		
-  		// Output as YYYYY-MM-DD. Ignore the time.
- 		const formatted_date = curr_date.toISOString().split('T')[0];
-  		display.textContent = formatted_date;
-
-		let curr_PRs = structuredClone(FiveBerData);
-		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
-		// what was profile pic links will remain profile pic links
-		// need player names 'cause we're gonna sort this thing in order
-		// Calculate everyone's PRs at this time
-		for (let i = 0; i < player_count; i++){
-			//list of runs (timestamp+PR)
-			player_data = FiveBerData[i][1];
-			//check if the player has a run at this time
-			//curr_player_data[0][0] is the timestamp of the first ever run
-			if (curr_timestamp < player_data[0][0]){
-				// if player doesn't have a run yet:
-				// set their PR to an 3600000, which means "NO RUN YET"
-				// so that converting to mm:ss:xxx can have an exception
-				curr_PRs[i][1] = 3600000;
-			} else {
-				// if player already has runs:
-				// keep running, from late to early runs, if run is after curr_timestamp
-				let run_index = player_data.length - 1;
-				while (curr_timestamp < player_data[run_index][0]){
-					run_index--;
-				}
-				//this run is the curr_PR.
-				curr_PRs[i][1] = player_data[run_index][1];
-			}	
-		}
-		//sort curr_PRs by time, sorting the player names with them
-		curr_PRs.sort((a,b) => a[1] - b[1])
-		// Loop through everybody and draw
-    	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
-      		//Only draw if player has run
-			if (curr_PRs[i][1] != 3600000){
-				draw(i,curr_PRs);
 			}
 		}
 	}
