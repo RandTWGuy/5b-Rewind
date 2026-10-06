@@ -46,7 +46,7 @@
     //rectangle center coordinates
     let curr_center_x;
     let curr_center_y;
-	
+    
 	//Text style
 	ctx.textAlign = "center";
     
@@ -81,8 +81,6 @@
 	slider.step = 86400000;
 	slider.value = end_time_stamp; //Default to today
 
-	//-------------------------------------------------------------------
-
 	//Function Code: Updating
 	function update(curr_timestamp){
   		const curr_date = new Date(curr_timestamp);
@@ -91,7 +89,7 @@
  		const formatted_date = curr_date.toISOString().split('T')[0];
   		display.textContent = formatted_date;
 
-		let curr_PRs = structuredClone(FiveBerData);
+		const curr_PRs = structuredClone(FiveBerData);
 		//Will turn into [[player1,PR1],[player2,PR2]] eventually;
 		// what was profile pic links will remain profile pic links
 		// need player names 'cause we're gonna sort this thing in order
@@ -119,98 +117,100 @@
 		}
 		//sort curr_PRs by time, sorting the player names with them
 		curr_PRs.sort((a,b) => a[1] - b[1])
-		// Loop through everybody and draw
+		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
-      		//Only draw if player has run
-			if (curr_PRs[i][1] != 3600000){
-				//Calculate x_block and y_block coordinates
-      	//0-indexed
-      	curr_x_block = player_index % x_blocks;
-      	curr_y_block = (player_index - curr_x_block)/x_blocks;
-      	
-      	//Calculate the Rectangle
-      	rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
-      	rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
+      		//Calculate x_block and y_block coordinates
+      		//0-indexed
+      		curr_x_block = i % x_blocks;
+      		curr_y_block = (i - curr_x_block)/x_blocks;
+      		
+      		//Calculate the Rectangle
+      		rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
+      		rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
       
-      	//Clear the last block
-		ctx.clearRect(rect_x,rect_y,block_x,block_y);
-		//set color
-		if (player_index == 0){
-			ctx.fillStyle = 'gold';
-		} else if (player_index == 1){
-			ctx.fillStyle = 'silver';
-		} else if (player_index == 2){
-			ctx.fillStyle = 'peru';
-		} else {
-      		ctx.fillStyle = 'white';
-		}
-		//draw rect
-      	ctx.fillRect(rect_x,rect_y,block_x,block_y);
+      		//Clear the last block
+			ctx.clearRect(rect_x,rect_y,block_x,block_y);
+			//set color
+			if (i == 0){
+				ctx.fillStyle = 'gold';
+			} else if (i == 1){
+				ctx.fillStyle = 'silver';
+			} else if (i == 2){
+				ctx.fillStyle = 'peru';
+			} else {
+      			ctx.fillStyle = 'white';
+			}
+			//draw rect
+      		ctx.fillRect(rect_x,rect_y,block_x,block_y);
 
-		// semi-opaque profile pic
-		// if there is a profile pic:
-		if (curr_PRs[player_index].length == 3 && pre_load_imgs[curr_PRs[player_index][0]]) {
-  		const profile_img = pre_load_imgs[curr_PRs[player_index][0]];
+			// semi-opaque profile pic
+			// if there is a profile pic:
+			if (curr_PRs[i].length == 3 && pre_load_imgs[curr_PRs[i][0]]) {
+  			const profile_img = pre_load_imgs[curr_PRs[i][0]];
  			
-  			// Only draw if the image is already loaded
-  			if (profile_img.complete) {
-    			ctx.globalAlpha = img_opacity;
-    			ctx.drawImage(
-      				profile_img,
-      				rect_x + (img_margin * block_x),           // x offset
-      				rect_y + (img_margin * block_y),           // y offset
-      				(1 - 2 * img_margin) * block_x,            // width
-      				(1 - 2 * img_margin) * block_y             // height
-    				);
-  			}
-		}
-		
-	  	//Text style
-		ctx.font = "14px Arial";
-      	ctx.fillStyle = "black";//black
-		ctx.globalAlpha = 1.0;
-		
-		//Calculate center of block
-      	curr_center_x = rect_x + (block_x / 2);
-		curr_center_y = rect_y + (block_y / 2);
-		//Player name text top of block
-		ctx.textBaseline = "top";
-      	ctx.fillText(curr_PRs[player_index][0], curr_center_x, curr_center_y - (block_y / 2));
-		
-		//PR time text
-		let text;
-		let PR_time = curr_PRs[player_index][1];
-		
-		//Convert to mm:ss:xxx
-		let PR_ms = PR_time%1000;
-		PR_time = (PR_time - PR_ms)/1000;
-		let PR_sec = PR_time%60;
-		let PR_min = (PR_time - PR_sec)/60;
-		//make sec always have two digits
-		PR_sec = ('0' + PR_sec).slice(-2);
-		//make ms always have three digits
-		PR_ms = ('00' + PR_ms).slice(-3);
-		
-		//text
-		text = `${PR_min}:${PR_sec}.${PR_ms}`;
-		
-		
-		//Display text at the bottom of the block
-		ctx.textBaseline = "bottom";
-		ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
+  				// Only draw if the image is already loaded
+  				if (profile_img.complete) {
+    				ctx.globalAlpha = img_opacity;
+    				ctx.drawImage(
+      					profile_img,
+      					rect_x + (img_margin * block_x),           // x offset
+      					rect_y + (img_margin * block_y),           // y offset
+      					(1 - 2 * img_margin) * block_x,            // width
+      					(1 - 2 * img_margin) * block_y             // height
+    					);
+  				}
+			}
+			
+	  		//Text style
+			ctx.font = "14px Arial";
+      		ctx.fillStyle = "black";//black
+			ctx.globalAlpha = 1.0;
+			
+			//Calculate center of block
+      		curr_center_x = rect_x + (block_x / 2);
+			curr_center_y = rect_y + (block_y / 2);
+			//Player name text top of block
+			ctx.textBaseline = "top";
+      		ctx.fillText(curr_PRs[i][0], curr_center_x, curr_center_y - (block_y / 2));
+			
+			//PR time text
+			let text;
+			let PR_time = curr_PRs[i][1];
+			if (PR_time == 3600000){
+				//The PR_time is still a number for comparison purposes; 3600000 acts like infty on this scale.
+				text = "NO RUN YET";
+			} else {
+				//Convert to mm:ss:xxx
+				let PR_ms = PR_time%1000;
+				PR_time = (PR_time - PR_ms)/1000;
+				let PR_sec = PR_time%60;
+				let PR_min = (PR_time - PR_sec)/60;
+				//make sec always have two digits
+				PR_sec = ('0' + PR_sec).slice(-2);
+				//make ms always have three digits
+				PR_ms = ('00' + PR_ms).slice(-3);
+				
+				//text
+				text = `${PR_min}:${PR_sec}.${PR_ms}`;
+			}
+			
+			//Display text at the bottom of the block
+			ctx.textBaseline = "bottom";
+			ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
 
-		//semisolid ranking numbers
-		//Text style
-      	ctx.fillStyle = "grey";
-		ctx.globalAlpha = rank_opacity;
-		ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
-    	//text
-		ctx.textBaseline = "middle";
-		ctx.fillText(String(player_index + 1), curr_center_x, curr_center_y);
+			//semisolid ranking numbers only if player has run
+			if (curr_PRs[i][1] != 3600000){
+				//Text style
+      			ctx.fillStyle = "grey";
+				ctx.globalAlpha = rank_opacity;
+				ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
+    			//text
+				ctx.textBaseline = "middle";
+				ctx.fillText(String(i + 1), curr_center_x, curr_center_y);
 			}
 		}
 	}
-	
+
 	//Run function once
 	update(Number(slider.value));
 	// Check if the slider is changing
