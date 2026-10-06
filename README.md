@@ -9,7 +9,6 @@ Once the PRs of everybody are determined, they are sorted and displayed.
 
 ## Note on AI usage:
 No line of code in this repository was directly written by Artificial Intelligence (AI). However, I have used AIs to debug my code (especially typos) and provide alternatives to an extent; yet the first version of code was entirely written by myself and not AIs.\
-**FROM BEFORE 9/30/2026 However, I need the time, in milliseconds, to load into *data.js* manually. Since I could not find a mm-ss-xxx to millisecond converter online, I had to resort to asking AI. However, since the AI just writes code to calculate in the back-end, and nothing else, I believe that this qualifies as fair use.**\
 As another example, I did not know how to pre-load images, and I asked Github Copilot for a code snippet. However, after pasting the snippet into the code, I checked every line again to make sure that I knew what it does. In addition, Copilot told me to insert the snippet between lines X and Y, but it may be looking at another version, because those line numbers were wrong. I pasted the snippet where it belongs.
 
 
