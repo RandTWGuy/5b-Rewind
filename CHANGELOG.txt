@@ -4,7 +4,7 @@ TODO (ranked in order of importance and ease):
 
 1) ADD MEESTER'S DATA (& Note about millisecond-less times)
 
-2) Collect data from actual runners. (Currently: 20 runners (plus incomplete Meester data) and their 186/251 runs; 74.4% completed; Meester data is not included in the percentage numerator, only the denominator. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
+2) Collect data from actual runners. (Currently: 24 runners (plus incomplete Meester data) and their 186/251 runs; 74.1% completed; Meester data is not included in the percentage numerator, only the denominator. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
 (Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
 
 3) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
