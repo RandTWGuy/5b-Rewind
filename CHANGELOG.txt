@@ -18,9 +18,10 @@ TODO (ranked in order of importance and ease):
 7) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/06:
-Work Time: 0.5hrs
+Work Time: 1.5hrs
 - Edit README's AI Usage Note and Special Thanks
 - Removed rank numbers for players without runs yet
+- Moved the block-drawing code to another function in script.js, draw(). This is how I removed blocks completely for run-less players; now they don't show up! We only need a single if statement before executing draw(); no need to check if the player has a run or not all the time anymore!
 
 2026/10/05:
 Work Time: 1hr
