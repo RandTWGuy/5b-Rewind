@@ -29,7 +29,7 @@ Work Time: 3.5hrs
 - Removed rank numbers for players without runs yet
 - Tried "Moving the block-drawing code to another function in script.js, draw(). Removing blocks completely for run-less players; now they don't show up! We only need a single if statement before executing draw(); no need to check if the player has a run or not all the time anymore!". IT FAILED UTTERLY AND COMPLETELY AND CLOVERDROP HAS SEVEN CLONES. WENT CRAZY AND FREAKED OUT FOR AN HOUR THEN DELETED ALL CHANGES AND RESETTED EVVERYTHING TO WHAT IT WAS THIS MORNING. SO NOW DRAW() IS DEAD AND I LOVE IT.
 - Organized drawing-related has-player-run-yet logic, moving all of them into a giant if statement. In the if statement is all drawing. (Also, the canvas is now cleared every update(), so that's cool) This means that all run-less players don't have blocks. That's one TODO complete!
-- There's a weird bug: right before a new player appears, a semitransparent shadow of the last-placer will appear on the next block for 1-2 days. Like how. idk why this happens at all.
+- There's a weird bug: right before a new player appears, a semitransparent shadow of the last-placer will appear on the next block for 1-2 days. Like how. idk why this happens at all. Shoutout to my brother for finding this bug during playtesting.
 
 2026/10/05:
 Work Time: 1hr
