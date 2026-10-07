@@ -144,6 +144,7 @@
       				ctx.fillStyle = 'white';
 				}
 				//draw rect
+				ctx.globalAlpha = 1.0;
       			ctx.fillRect(rect_x,rect_y,block_x,block_y);
 
 				// semi-opaque profile pic
