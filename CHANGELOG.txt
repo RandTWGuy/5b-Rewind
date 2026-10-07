@@ -15,6 +15,11 @@ TODO (ranked in order of importance and ease):
 
 6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/07:
+Work Time: 0.5hrs
+- I think the bug with the semitransparent shadow, after some testing, only appears when the slider is moving backwards and a newly-appeared player disappears. So then it's likely a canvas-clearing problem.
+- I tried clearing the entire canvas, then adding the light-blue background, then adding the blocks.
+
 2026/10/06:
 Work Time: 3.5hrs
 - Edit README's AI Usage Note and Special Thanks
