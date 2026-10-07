@@ -79,7 +79,7 @@
 
 	//--------------------------------------------------------------------------------------------------------------------------------
 	//Function Code: drawing
-	function draw(index, player_name, player_PR){
+	function draw(index, player_name, player_PR, pfp_bool){
 		//Pass in pre-stored player_name and player_PR, to not deal with global, local, deepcopied, etc., arrays.
 		
 		//Calculate x_block and y_block coordinates
@@ -108,7 +108,7 @@
 		
 		// semi-opaque profile pic
 		// if there is a profile pic:
-		if (curr_PRs[i].length == 3 && pre_load_imgs[player_name]) {
+		if (pfp_bool && pre_load_imgs[player_name]) {
   			const profile_img = pre_load_imgs[player_name];
  			
   			// Only draw if the image is already loaded
@@ -213,14 +213,15 @@
     	ctx.fillRect(0,0,canvas_x,canvas_y);
 		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
-			player_name = curr_PRs[i][0];//name of the current player
-			player_PR = curr_PRs[i][1];// PR of the current player
+			let player_name = curr_PRs[i][0];//name of the current player
+			let player_PR = curr_PRs[i][1];// PR of the current player
+			let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
 			//only do stuff for players with runs
       		if (player_PR == 3600000){
 				break;//if a player has no run, so are all players behind them run-less.
 			} else {
 				//only do stuff for players with runs
-				draw(i,player_name,player_PR);
+				draw(i,player_name,player_PR,pfp_bool);
 			}	
 		}
 	}
