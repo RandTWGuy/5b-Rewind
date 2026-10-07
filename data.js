@@ -125,7 +125,8 @@
 				  ["2020-06-12","15:44.666"],
 				  ["2020-07-27","15:40.100"],
 				  ["2020-07-27","15:12.183"]
-			  ]
+			  ],
+			  "https://www.speedrun.com/static/user/qjnp3zq8/image.png"
 		  ],
 		  [
 			  'AntLadders',
@@ -149,7 +150,7 @@
 				  ["2021-06-01","11:24.680"],
 				  ["2021-06-17","11:08.410"]
 			  ],
-			  "https://www.speedrun.com/static/user/jmor71y8/image.png?"
+			  "https://www.speedrun.com/static/user/jmor71y8/image.png"
 		  ],
 		  [
 			  '1000%',
