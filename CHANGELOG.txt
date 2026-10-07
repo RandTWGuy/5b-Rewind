@@ -21,7 +21,7 @@ TODO (ranked in order of importance and ease):
 Work Time: 0.5hrs
 - I think the bug with the semitransparent shadow, after some testing, only appears when the slider is moving backwards and a newly-appeared player disappears. So then it's likely a canvas-clearing problem.
 - I tried clearing the entire canvas, then adding the light-blue background, then adding the blocks. And that fixed the bug.
-- Actually the bug is because I forgot to reset globalAlpha after drawing the rank numbers. How stupid of me. Clearing the canvas wasn't needed at all!
+- Actually the bug is because I forgot to reset globalAlpha after drawing the rank numbers. How stupid of me. Clearing the canvas wasn't needed at all! Bug--FIXED!
 
 2026/10/06:
 Work Time: 3.5hrs
