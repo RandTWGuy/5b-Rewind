@@ -115,10 +115,9 @@
 		curr_PRs.sort((a,b) => a[1] - b[1])
 		
 		// drawing time!
-		//clear the canvas
-		ctx.clearRect(0,0,canvas_x,canvas_y);
 		// Drawing a rectangle over the whole canvas as background.
 		// In the future, add logo here
+		ctx.globalAlpha = 1.0;
     	ctx.fillStyle = '#ADD8E6';
     	ctx.fillRect(0,0,canvas_x,canvas_y);
 		// Loop through everybody
