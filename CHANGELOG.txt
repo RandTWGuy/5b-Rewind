@@ -2,20 +2,17 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-1) ADD MEESTER'S DATA (& Note about millisecond-less times)
+1) Collect data from actual runners. (Currently: the top 25 runners and their 207/251 runs; 82.5% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
-2) Collect data from actual runners. (Currently: 24 runners (plus incomplete Meester data) and their 186/251 runs; 74.1% completed; Meester data is not included in the percentage numerator, only the denominator. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database. )
-(Prioritize: Meester Tweester, AntLadders, KorZen, Numbly; the de facto big four. All done except MT.)
+2) Add logo! A YouTube rewind symbol (two triangles pointing left), one triangle with "5", another with "b" on top.
 
-3) Add logo! A YouTube rewind symbol (two triangles pointing left), one triangle with "5", another with "b" on top.
+3) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
 
-4) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
+4) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
-5) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+5) Add an autoplay feature
 
-6) Add an autoplay feature
-
-7) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/07:
 Work Time: 1hr
@@ -24,6 +21,7 @@ Work Time: 1hr
 - Actually the bug is because I forgot to reset globalAlpha after drawing the rank numbers. How stupid of me. Clearing the canvas wasn't needed at all! Bug--FIXED!
 - Standardized the placement of globalAlphas. Now, they are only set/reset before ctx.bla.
 - Re-added draw(). It does not fiddle with curr_PRs and other arrays now; it only takes in index, name, PR time, and pfp-bool. This should hopefully kill all issues that are local/global and deepcopy-related.
+- I FINALLY ADDED MEESTERTWEESTER'S DATA! (21 runs; and also the note about ms-less times)
 
 2026/10/06:
 Work Time: 3.5hrs
