@@ -13,7 +13,7 @@ TODO (ranked in order of importance and ease):
 5) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/08:
-Work Time: 1.5hrs
+Work Time: 2hrs
 - Added mellohihellohi's data! (1 run; WR26)
 - Added Phant0mInfinity's data! (4 runs; WR27)
 - Added WatermelonPinTourmaline's data! (1 run; shortened to WatermelonPin; WR 28)
