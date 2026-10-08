@@ -15,13 +15,15 @@ TODO (ranked in order of importance and ease):
 6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/08:
-Work Time: 0.5hrs
+Work Time: 1.5hrs
 - Added mellohihellohi's data! (1 run; WR26)
 - Added Phant0mInfinity's data! (4 runs; WR27)
 - Added WatermelonPinTourmaline's data! (1 run; shortened to WatermelonPin; WR 28)
 - Added JookDoobs' data! (2 runs; WR 29)
 - Added Hyperblaze's data! (1 run; WR 30)
 - This region has so many one-runners that could be good but don't run often. And it's super competitive: WR27 and WR30 are SIX seconds apart! What!
+- Created the logo!(Process: https://www.youtube.com/watch?v=FoX6uk71lno)
+- Added code for the logo in script.js.
 
 2026/10/07:
 Work Time: 1.5hrs
