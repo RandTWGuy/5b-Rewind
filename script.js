@@ -8,7 +8,7 @@
 
 	// logo preloading
 	const logoImg = new Image();
-	logoImg.src = './5b_Rewind_logo.jpg';
+	logoImg.src = './5b_Rewind_logo.png';
 	//opacity
 	const logo_opacity = 0.5;
 	
