@@ -6,7 +6,7 @@
 	const rank_opacity = 0.75;
 	const rank_margin = 0.1;
 
-	// logo
+	// logo preloading
 	const logoImg = new Image();
 	logoImg.src = './5b_Rewind_logo.jpg';
 	//opacity
