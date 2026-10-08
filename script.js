@@ -1,34 +1,36 @@
 	// profile pic opacity & margin PROPORTION
-	let img_opacity = 0.8;
-	let img_margin = 0.15;
+	const img_opacity = 0.8;
+	const img_margin = 0.15;
 	
 	// Rank number opacity & margin PROPORTION
-	let rank_opacity = 0.75;
-	let rank_margin = 0.1;
+	const rank_opacity = 0.75;
+	const rank_margin = 0.1;
 
 	// logo
-	const logo = new Image();
-	logo.src = '5b_Rewind_logo.jpg';
+	const logoImg = new Image();
+	logoImg.src = './5b_Rewind_logo.jpg';
+	//opacity
+	const logo_opacity = 0.5;
 	
 	// canvas dimensions
-    let canvas_x = canvas.width;
-    let canvas_y = canvas.height;
+    const canvas_x = canvas.width;
+    const canvas_y = canvas.height;
 
     // Margin
-    let margin_x = 25;
-    let margin_y = 25;
+    const margin_x = 25;
+    const margin_y = 25;
     
     // width and height of a single block
-    let block_x = 100;
-    let block_y = 100;
+    const block_x = 100;
+    const block_y = 100;
     
     //space between blocks
-    let buffer_x = 20;
-    let buffer_y = 20;
+    const buffer_x = 20;
+    const buffer_y = 20;
 
     //blocks that fit per axis
-    let x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
-    let y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buffer_y)) + 1;
+    const x_blocks = Math.floor((canvas_x - (margin_x * 2) - block_x)/(block_x + buffer_x)) + 1;
+    const y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buffer_y)) + 1;
 
 	//--------------------------------------------------------------------------------------------------------------------------------
 	
@@ -119,11 +121,11 @@
   			if (profile_img.complete) {
     			ctx.globalAlpha = img_opacity;
     			ctx.drawImage(
-      			profile_img,
-      			rect_x + (img_margin * block_x),           // x offset
-      			rect_y + (img_margin * block_y),           // y offset
-      			(1 - 2 * img_margin) * block_x,            // width
-      			(1 - 2 * img_margin) * block_y             // height
+      				profile_img,
+      				rect_x + (img_margin * block_x),           // x offset
+      				rect_y + (img_margin * block_y),           // y offset
+      				(1 - 2 * img_margin) * block_x,            // width
+      				(1 - 2 * img_margin) * block_y             // height
     			);
   			}
 		}
@@ -215,11 +217,16 @@
     	ctx.fillStyle = '#ADD8E6';
     	ctx.fillRect(0,0,canvas_x,canvas_y);
 		// logo
-		logo.onload = function() {
-			//cover the canvas
-			//assumes that canvas width > height
-    		ctx.drawImage(logo, (canvas_x - canvas_y) / 2, 0, canvas_y, canvas_y);
-		};
+		if (logoImg.complete){
+			ctx.globalAlpha = logo_opacity;
+			ctx.drawImage(
+				logoImg,
+				(canvas_x - canvas_y) / 2,//x offset; assumes canvas_x > canvas_y
+				margin_y,//y offset
+				canvas_y - (margin_y * 2),//square from top to bottom
+				canvas_y - (margin_y * 2)
+			);
+		}
 		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
 			let player_name = curr_PRs[i][0];//name of the current player
