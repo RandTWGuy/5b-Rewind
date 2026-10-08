@@ -4,15 +4,13 @@ TODO (ranked in order of importance and ease):
 
 1) Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
-2) Add logo! A YouTube rewind symbol (two triangles pointing left), one triangle with "5", another with "b" on top.
+2) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
 
-3) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
+3) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
-4) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+4) Add an autoplay feature
 
-5) Add an autoplay feature
-
-6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+5) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/08:
 Work Time: 1.5hrs
@@ -23,7 +21,7 @@ Work Time: 1.5hrs
 - Added Hyperblaze's data! (1 run; WR 30)
 - This region has so many one-runners that could be good but don't run often. And it's super competitive: WR27 and WR30 are SIX seconds apart! What!
 - Created the logo!(Process: https://www.youtube.com/watch?v=FoX6uk71lno)
-- Added code for the logo in script.js.
+- Added code for the logo in script.js. That's another (now former) TODO complete!
 
 2026/10/07:
 Work Time: 1.5hrs
