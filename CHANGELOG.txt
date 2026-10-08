@@ -2,7 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-1) Collect data from actual runners. (Currently: the top 25 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
+1) Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
 2) Add logo! A YouTube rewind symbol (two triangles pointing left), one triangle with "5", another with "b" on top.
 
