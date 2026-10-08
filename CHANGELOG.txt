@@ -2,7 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-1) Collect data from actual runners. (Currently: the top 25 runners and their 207/251 runs; 82.5% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
+1) Collect data from actual runners. (Currently: the top 25 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
 2) Add logo! A YouTube rewind symbol (two triangles pointing left), one triangle with "5", another with "b" on top.
 
@@ -13,6 +13,15 @@ TODO (ranked in order of importance and ease):
 5) Add an autoplay feature
 
 6) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+
+2026/10/08:
+Work Time: 0.5hrs
+- Added mellohihellohi's data! (1 run; WR26)
+- Added Phant0mInfinity's data! (4 runs; WR27)
+- Added WatermelonPinTourmaline's data! (1 run; shortened to WatermelonPin; WR 28)
+- Added JookDoobs' data! (2 runs; WR 29)
+- Added Hyperblaze's data! (1 run; WR 30)
+- This region has so many one-runners that could be good but don't run often. And it's super competitive: WR27 and WR30 are SIX seconds apart! What!
 
 2026/10/07:
 Work Time: 1.5hrs
