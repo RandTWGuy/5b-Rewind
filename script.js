@@ -1,15 +1,19 @@
+	// profile pic opacity & margin PROPORTION
+	let img_opacity = 0.8;
+	let img_margin = 0.15;
+	
+	// Rank number opacity & margin PROPORTION
+	let rank_opacity = 0.75;
+	let rank_margin = 0.1;
+
+	// logo
+	const logo = new Image();
+	logo.src = '5b_Rewind_logo.jpg';
+	
 	// canvas dimensions
     let canvas_x = canvas.width;
     let canvas_y = canvas.height;
 
-	// profile pic opacity & margin PROPORTION
-	let img_opacity = 0.8;
-	let img_margin = 0.15;
-
-	// Rank number opacity & margin PROPORTION
-	let rank_opacity = 0.75;
-	let rank_margin = 0.1;
-	
     // Margin
     let margin_x = 25;
     let margin_y = 25;
@@ -207,10 +211,15 @@
 		
 		// drawing time!
 		// Drawing a rectangle over the whole canvas as background.
-		// In the future, add logo here
 		ctx.globalAlpha = 1.0;
     	ctx.fillStyle = '#ADD8E6';
     	ctx.fillRect(0,0,canvas_x,canvas_y);
+		// logo
+		logo.onload = function() {
+			//cover the canvas
+			//assumes that canvas width > height
+    		ctx.drawImage(logo, (canvas_x - canvas_y) / 2, 0, canvas_y, canvas_y);
+		};
 		// Loop through everybody
     	for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
 			let player_name = curr_PRs[i][0];//name of the current player
