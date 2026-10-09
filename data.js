@@ -404,6 +404,44 @@
 			  [
 				  ["2023-11-29","23:38.070"]
 			  ]
+		  ],
+		  [
+			  'migue2763',
+			  [
+				  ["2024-06-02","39:54.500"],
+				  ["2025-03-13","35:15.933"],
+				  ["2025-03-14","29:32.370"],
+				  ["2025-03-16","25:04.000"]//Again, KorZen verified this, so I'm giving it a pass.
+			  ]
+		  ],
+		  [
+			  'bandi72006',
+			  [
+				  ["2020-08-27","25:17.320"]
+			  ],
+			  "https://www.speedrun.com/static/user/j92vewo8/image.png"
+		  ],
+		  [
+			  'kth11211',
+			  [
+				  ["2024-12-05","25:49.633"]
+			  ],
+			  "https://www.speedrun.com/static/user/8q50mmd8/image.png"
+		  ],
+		  [
+			  'imaperson1060',
+			  [
+				  ["2020-08-25","40:53.533"],
+				  ["2020-08-26","33:40.000"],
+				  ["2020-08-26","26:24.200"]
+			  ],
+			  "https://www.speedrun.com/static/user/j5wglkqj/image.png"
+		  ],
+		  [
+			  'IsraeliOSCFan',
+			  [
+				  ["2025-08-26","26:30.800"]
+			  ]
 		  ]
 	  ];
 
