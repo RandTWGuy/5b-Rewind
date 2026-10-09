@@ -4,8 +4,6 @@ TODO (ranked in order of importance and ease):
 
 - Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
-- Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
-
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
 - Add an autoplay feature
@@ -16,6 +14,7 @@ TODO (ranked in order of importance and ease):
 Work Time: 1.5hrs
 - Centered the logo. (I forgot to calculate the margin size yesterday)
 - Re-drew the logo based on Yariktopikser's suggestions. Based on HTML5b's favicon, special thanks to coppersalts for that.
+- Added logic in draw() to also do hour-long-run checks. Another TODO complete!
 
 2026/10/08:
 Work Time: 2hrs
