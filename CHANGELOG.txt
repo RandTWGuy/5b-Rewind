@@ -2,9 +2,11 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Collect data from actual runners. (Currently: the top 35 runners and their 234/250 runs; 93.6% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
+- Collect data from actual runners. (Currently: the top 40 runners and their 238/250 runs; 95.2% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
 
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+
+- Add a timeline feature
 
 - Add an autoplay feature
 
@@ -13,7 +15,7 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/09:
-Work Time: 3hrs
+Work Time: 3.5hrs
 - Centered the logo. (I forgot to calculate the margin size yesterday)
 - Re-drew the logo based on Yariktopikser's suggestions. Based on HTML5b's favicon, special thanks to coppersalts for that.
 - Changed sentinel 'NO RUN YET' from 1 hour to 10, and added logic in draw() to do is-hour-long-run checks. Another TODO complete! (Note: I don't want to teach data.js how to differentiate between hh:mm:ss.xxx and mm:ss.xxx, so I use (m)mm:ss.xxx instead)
@@ -25,6 +27,8 @@ Work Time: 3hrs
 - Added maztik's data! (1 run; WR36)
 - Added Zelo101's data! (3 runs; WR37; bro got a SUB-30 IN FEB 2019 and is not Meester?!?!?)
 - Added PaperMarioParty's data! (4 runs; WR38; and first recorded hour-long run! Even though he got a PR later that day so the hour-long run won't be shown.)
+- Added Pokewill's data! (1 run)
+- Added foreverfractal117's data! (3 runs; feat. the second ever logged hour-long run and the first to remain undefeated by the same player for the day)
 
 2026/10/08:
 Work Time: 2hrs
