@@ -497,6 +497,53 @@
 				  ["2025-03-21","39:02.090"]
 			  ],
 			  "https://www.speedrun.com/static/user/xkp77d2j/image.png"
+		  ],
+		  [
+			  'Andyman620',
+			  [
+				  ["2021-01-13","44:28.000"]//probably not timed to the ms
+			  ],
+			  "https://www.speedrun.com/static/user/48g0re2x/image.png"
+		  ],
+		  [
+			  'Chanatip',
+			  [
+				  ["2026-05-10","47:37.167"]
+			  ],
+			  "https://www.speedrun.com/static/user/j9l5zmvj/image.png"
+		  ],
+		  [
+			  'TiedDice',
+			  [
+				  ["2024-11-17","50:22.333"]
+			  ],
+			  "https://www.speedrun.com/static/user/j5p9v0z8/image.png"
+		  ],
+		  [
+			  'dioramakoob',
+			  [
+				  ["2025-12-30","51:23.000"]// Verified by KorZen, so I'll take the 0 ms
+			  ]
+		  ],
+		  [
+			  'carykh',
+			  [
+				  ["2023-11-06","54:25.970"]
+			  ],
+			  "https://www.speedrun.com/static/user/qj2z6p7j/image.png"
+		  ],
+		  [
+			  'Turdman600',
+			  [
+				  ["2020-03-07","115:20.970"]
+			  ],
+			  "https://www.speedrun.com/static/user/18vyo5v8/image.png"
+		  ],
+		  [
+			  'Sonicboom363',
+			  [
+				  ["2019-06-28","485:02.533"]
+			  ]
 		  ]
 	  ];
 
