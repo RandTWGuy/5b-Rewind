@@ -2,7 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
+- Collect data from actual runners. (Currently: the top 35 runners and their 226/250 runs; 90.4% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
 
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
@@ -11,10 +11,15 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/09:
-Work Time: 1.5hrs
+Work Time: 2hrs
 - Centered the logo. (I forgot to calculate the margin size yesterday)
 - Re-drew the logo based on Yariktopikser's suggestions. Based on HTML5b's favicon, special thanks to coppersalts for that.
 - Added logic in draw() to also do hour-long-run checks. Another TODO complete!
+- Added migue2763's data! (4 runs; WR31)
+- Added bandi72006's data! (1 run; WR32)
+- Added kth11211's data! (1 run; WR33)
+- Added imaperson1060's data! (3 runs; 4 runs but one isn't a PR; WR34)
+- Added TheIsraeliOSCFan's data! (1 run; shortened to IsraeliOSCFan; WR35)
 
 2026/10/08:
 Work Time: 2hrs
@@ -26,6 +31,7 @@ Work Time: 2hrs
 - This region has so many one-runners that could be good but don't run often. And it's super competitive: WR27 and WR30 are SIX seconds apart! What!
 - Created the logo!(Process: https://www.youtube.com/watch?v=FoX6uk71lno)
 - Added code for the logo in script.js. That's another (now former) TODO complete!
+- Released v0.3.2!
 
 2026/10/07:
 Work Time: 1.5hrs
