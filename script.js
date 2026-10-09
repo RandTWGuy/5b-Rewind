@@ -10,7 +10,7 @@
 	const logoImg = new Image();
 	logoImg.src = './5b_Rewind_logo_2.0_no_outline.png';
 	//opacity
-	const logo_opacity = 0.5;
+	const logo_opacity = 0.7;
 	
 	// canvas dimensions
     const canvas_x = canvas.width;
