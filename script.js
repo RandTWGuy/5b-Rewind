@@ -216,12 +216,14 @@
 		ctx.globalAlpha = 1.0;
     	ctx.fillStyle = '#ADD8E6';
     	ctx.fillRect(0,0,canvas_x,canvas_y);
+		
 		// logo
 		if (logoImg.complete){
 			ctx.globalAlpha = logo_opacity;
 			ctx.drawImage(
 				logoImg,
-				(canvas_x - canvas_y) / 2,//x offset; assumes canvas_x > canvas_y
+				(canvas_x - canvas_y) / 2 + margin_y,//x offset; assumes canvas_x > canvas_y
+				// The above was simplified from (canvas_x - (canvas_y - 2* margin_y)) / 2
 				margin_y,//y offset
 				canvas_y - (margin_y * 2),//square from top to bottom
 				canvas_y - (margin_y * 2)
