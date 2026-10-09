@@ -2,15 +2,21 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-1) Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
+- Collect data from actual runners. (Currently: the top 30 runners and their 216/251 runs; 86.1% completed. There are 252 any% RTA runs shown on SRC, but Fma435's most recent run wasn't a PR and so is not in the database.)
 
-2) Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
+- Incorporate Yariktopikser's idea of giving the logo diagonal deep red lines
 
-3) Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+- Modify the code to allow for more-than-hour times. In particular, Sonicboom363 has a 8-hour-run from 2019, which still stands today as the longest ever run. These stuff are usually unimportant, but that run is from 2019, so it's actually kinda important.
 
-4) Add an autoplay feature
+- Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
-5) Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+- Add an autoplay feature
+
+- Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+
+2026/10/09:
+Work Time: 0.5hrs
+- Centered the logo. (I forgot to calculate the margin size yesterday)
 
 2026/10/08:
 Work Time: 2hrs
