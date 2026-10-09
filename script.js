@@ -155,8 +155,14 @@
 		//make ms always have three digits
 		PR_ms = ('00' + PR_ms).slice(-3);
 		
-		//text
-		text = `${PR_min}:${PR_sec}.${PR_ms}`;
+		//hour check and text
+		if (PR_min < 60){
+			text = `${PR_min}:${PR_sec}.${PR_ms}`;
+		} else {
+			let PR_hour = (PR_min - (PR_min % 60)) / 60;
+			PR_min = PR_min % 60;
+			text = `${PR_hour}:${PR_min}:${PR_sec}.${PR_ms}`
+		}
 						
 		//Display text at the bottom of the block
 		ctx.textBaseline = "bottom";
