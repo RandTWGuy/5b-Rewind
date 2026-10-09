@@ -161,6 +161,9 @@
 		} else {
 			let PR_hour = (PR_min - (PR_min % 60)) / 60;
 			PR_min = PR_min % 60;
+			// minute count has to be padded here
+			PR_min = ('0' + PR_min).slice(-2);
+			
 			text = `${PR_hour}:${PR_min}:${PR_sec}.${PR_ms}`
 		}
 						
