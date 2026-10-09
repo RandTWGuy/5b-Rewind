@@ -2,7 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Collect data from actual runners. (Currently: the top 35 runners and their 230/250 runs; 92.0% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
+- Collect data from actual runners. (Currently: the top 35 runners and their 234/250 runs; 93.6% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
 
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
@@ -16,7 +16,7 @@ TODO (ranked in order of importance and ease):
 Work Time: 2.5hrs
 - Centered the logo. (I forgot to calculate the margin size yesterday)
 - Re-drew the logo based on Yariktopikser's suggestions. Based on HTML5b's favicon, special thanks to coppersalts for that.
-- Changed sentinel 'NO RUN YET' from 1 hour to 10, and added logic in draw() to do is-hour-long-run checks. Another TODO complete!
+- Changed sentinel 'NO RUN YET' from 1 hour to 10, and added logic in draw() to do is-hour-long-run checks. Another TODO complete! (Note: I don't want to teach data.js how to differentiate between hh:mm:ss.xxx and mm:ss.xxx, so I use (m)mm:ss.xxx instead)
 - Added migue2763's data! (4 runs; WR31)
 - Added bandi72006's data! (1 run; WR32)
 - Added kth11211's data! (1 run; WR33)
@@ -24,6 +24,7 @@ Work Time: 2.5hrs
 - Added TheIsraeliOSCFan's data! (1 run; shortened to IsraeliOSCFan; WR35)
 - Added maztik's data! (1 run; WR36)
 - Added Zelo101's data! (3 runs; WR37; bro got a SUB-30 IN FEB 2019 and is not Meester?!?!?)
+- Added PaperMarioParty's data! (4 runs; WR38; and first recorded hour-long run! Even though he got a PR later that day so the hour-long run won't be shown.)
 
 2026/10/08:
 Work Time: 2hrs
