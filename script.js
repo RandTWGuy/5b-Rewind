@@ -200,9 +200,9 @@
 			//curr_player_data[0][0] is the timestamp of the first ever run
 			if (curr_timestamp < player_data[0][0]){
 				// if player doesn't have a run yet:
-				// set their PR to an 3600000, which means "NO RUN YET"
+				// set their PR to an 36000000, which means "NO RUN YET"
 				// so that converting to mm:ss:xxx can have an exception
-				curr_PRs[i][1] = 3600000;
+				curr_PRs[i][1] = 36000000;
 			} else {
 				// if player already has runs:
 				// keep running, from late to early runs, if run is after curr_timestamp
@@ -241,7 +241,7 @@
 			let player_PR = curr_PRs[i][1];// PR of the current player
 			let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
 			//only do stuff for players with runs
-      		if (player_PR == 3600000){
+      		if (player_PR == 36000000){
 				break;//if a player has no run, so are all players behind them run-less.
 			} else {
 				//only do stuff for players with runs
