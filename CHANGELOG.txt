@@ -8,6 +8,8 @@ TODO (ranked in order of importance and ease):
 
 - Add an autoplay feature
 
+- Auto-update once all imgs have been pre-loaded.
+
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/09:
