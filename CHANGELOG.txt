@@ -2,7 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Collect data from actual runners. (Currently: the top 40 runners and their 238/250 runs; 95.2% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
+- Collect data from actual runners. (Currently: the top 40 runners and their 243/250 runs; 97.2% completed. There are 252 any% RTA runs shown on SRC, but Fma435 and imaperson1060 s' most recent run wasn't a PR and so are not in the database.)
 
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
@@ -27,8 +27,10 @@ Work Time: 3.5hrs
 - Added maztik's data! (1 run; WR36)
 - Added Zelo101's data! (3 runs; WR37; bro got a SUB-30 IN FEB 2019 and is not Meester?!?!?)
 - Added PaperMarioParty's data! (4 runs; WR38; and first recorded hour-long run! Even though he got a PR later that day so the hour-long run won't be shown.)
-- Added Pokewill's data! (1 run)
-- Added foreverfractal117's data! (3 runs; feat. the second ever logged hour-long run and the first to remain undefeated by the same player for the day)
+- Added Pokewill's data! (1 run; WR39)
+- Added foreverfractal117's data! (3 runs; WR40; feat. the second ever logged hour-long run and the first to remain undefeated by the same player for the day)
+- Added gamesfun123's data! (2 runs; WR41)
+- Added anima52719's data! (3 runs; WR42; lowest-ranking player with more than one run!
 
 2026/10/08:
 Work Time: 2hrs
