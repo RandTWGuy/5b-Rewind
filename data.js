@@ -457,6 +457,16 @@
 				  ["2019-02-23","29:40.300"]
 			  ],
 			  "https://www.speedrun.com/static/user/pj06ngrj/image.png"
+		  ],
+		  [
+			  'PaperMarioParty',
+			  [
+				  ["2022-03-08","75:34.120"],// look! An hour-long run!
+				  ["2022-03-08","48:42.940"],
+				  ["2022-03-09","41:29.210"],
+				  ["2022-03-09","31:33.730"]
+			  ],
+			  "https://www.speedrun.com/static/user/8rpdrl6j/image.png"
 		  ]
 	  ];
 
