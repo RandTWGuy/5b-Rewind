@@ -280,19 +280,19 @@ autoplayButton.addEventListener('click', () => {
 		autoplayButtonText.textContent = "Pause";
 		autoplayBool = true;
 
-		//autoplay-ing!
-		while (autoplayBool == true && slider.value < slider.max){
-			autoplayWait = document.getElementById("autoplaySpeedSelector").value;
-			//only happens once 
-			setTimeout(
-				// function
-				() => {
-					slider.value += slider.step;
-				},
-				//delay
-				autoplayWait
-			);
+		// //autoplay-ing!
+		// while (autoplayBool == true && slider.value < slider.max){
+		// 	autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+		// 	//only happens once 
+		// 	setTimeout(
+		// 		// function
+		// 		() => {
+		// 			slider.value += slider.step;
+		// 		},
+		// 		//delay
+		// 		autoplayWait
+		// 	);
 			
-		}
+		// }
 	}
 })
