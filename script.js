@@ -261,3 +261,6 @@ slider.addEventListener('input', (e) => {
 });
 
 // Autoplay
+//Tell JS about the HTML buttons
+const autoplayButton = document.getElementById("autoplayButton");
+const autoplayButtonText = document.getElementById("autoplayButtonText");
