@@ -16,12 +16,14 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/10:
-Work Time: 1.5hrs
+Work Time: 2hrs
 - Yariktopikser suggested that I add other non-any% categories next. However, I have to choose between data structures. If FiveBerData becomes an object of categories, the same player can have different pfps in different categories, which is weird; if it instead becomes a list of player data, each a list of player name, run data, and pfp, and the run data is an object of category data, then players with runs in one category but not another might break the code, since it assumes at least one historical run per player. I lean towards the first approach. But likely not very soon.
 - Started working on the autoplay feature. Likely for the rest of v4.0.
 - Added Play/Pause buttons into HTML and JS. Not functionable yet.
 - Added Autoplay Speed Selector. Has speeds of 0.2x, 0.5x, 1x, 1.5x, 2x, and 3x. 1x is 10 IRL days in 1 Rewind second.
 - Made Play/Pause buttons switch states every time pressed.
+- Tried implementing autoplay. It failed and crashed the page. ( (simplified) Reason: I implement it with a while that keeps running until autoplay is turned off. Inside the while is a setTimeout, which waits some milliseconds based on the speed selector, then advances the slider by one day. Apparently the while moves on to the next iteration immediately, it doesn't wait for the setTimeout to finish, and piles up trillions of setTimeouts until an OOM crashes the page. So I reverted all autoplay functionality.)
+- Missed the good ol' days with Python when wait() actually pauses the entire thing and waits. JS is tormenting me but maybe its b/c Python is purposefully uncomplicated.
 
 2026/10/09:
 Work Time: 4.5hrs
