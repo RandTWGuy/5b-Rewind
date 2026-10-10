@@ -46,7 +46,7 @@ Work Time: 4.5hrs
 - Added Sonicboom363's data! (1 run; WR49; hour-long #4)
 - OMG I FINALLY HAVE ALL 250 RUNS THIS IS SO INSANE AHHHHHHHHH
 - Edited intro text.
-- Released v0.4.0! The Trip Down Memory Update is here!
+- Released v0.4.0! The Trip Down Memory Lane Update is here!
 - Tied PR for longest work time in a day and PR for longest changelog entry. lol.
 
 2026/10/08:
