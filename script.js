@@ -265,17 +265,34 @@ slider.addEventListener('input', (e) => {
 //Tell JS about the HTML
 const autoplayButton = document.getElementById("autoplayButton");
 const autoplayButtonText = document.getElementById("autoplayButtonText");
-let autoplaySpeed;
 
 let autoplayBool = false;// 0 if Pausing and text says "Play", and vice versa
 
+let autoplayWait;//measured in Rewind ms per IRL day, so the wait time between days
+
 autoplayButton.addEventListener('click', () => {
-	if (autoplayBool == false){
-		autoplayButtonText.textContent = "Pause";
-		autoplayBool = true;
-	} else {
+	if (autoplayBool == true){
+		//Clicking is stopping
 		autoplayButtonText.textContent = "Play";
 		autoplayBool = false;
+	} else {
+		//Clicking is starting
+		autoplayButtonText.textContent = "Pause";
+		autoplayBool = true;
+
+		//autoplay-ing!
+		while (autoplayBool == true && slider.value < slider.max){
+			autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+			//only happens once 
+			setTimeout(
+				// function
+				() => {
+					slider.value += slider.step;
+				},
+				//delay
+				autoplayWait
+			);
+			
+		}
 	}
 })
-//autoplaySpeed = document.getElementById("autoplaySpeedSelector").value
