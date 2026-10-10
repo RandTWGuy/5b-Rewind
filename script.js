@@ -255,12 +255,27 @@ function update(curr_timestamp){
 	
 //Run function once
 update(Number(slider.value));
+
 // Check if the slider is changing
 slider.addEventListener('input', (e) => {
  	update(Number(e.target.value));
 });
 
 // Autoplay
-//Tell JS about the HTML buttons
+//Tell JS about the HTML
 const autoplayButton = document.getElementById("autoplayButton");
 const autoplayButtonText = document.getElementById("autoplayButtonText");
+let autoplaySpeed;
+
+let autoplayBool = False;// 0 if Pausing and text says "Play", and vice versa
+
+autoplayButton.addEventListener('click', () => {
+	if (autoplayBool == False){
+		autoplayButtonText.textContent = "Pause";
+		autoplayBool = True;
+	} else {
+		autoplayButtonText.textContent = "Play";
+		autoplayBool = False;
+	}
+})
+//autoplaySpeed = document.getElementById("autoplaySpeedSelector").value
