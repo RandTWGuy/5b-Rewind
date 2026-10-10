@@ -10,7 +10,13 @@ TODO (ranked in order of importance and ease):
 
 - Auto-update once all imgs have been pre-loaded.
 
+- Add other categories.
+
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
+
+2026/10/10:
+Work Time: 0.5hrs
+- Yariktopikser suggested that I add other non-any% categories next. However, I have to choose between data structures. If FiveBerData becomes an object of categories, the same player can have different pfps in different categories, which is weird; if it instead becomes a list of player data, each a list of player name, run data, and pfp, and the run data is an object of category data, then players with runs in one category but not another might break the code, since it assumes at least one historical run per player. I lean towards the first approach. But likely not very soon.
 
 2026/10/09:
 Work Time: 4.5hrs
@@ -38,7 +44,7 @@ Work Time: 4.5hrs
 - Added Sonicboom363's data! (1 run; WR49; hour-long #4)
 - OMG I FINALLY HAVE ALL 250 RUNS THIS IS SO INSANE AHHHHHHHHH
 - Edited intro text.
-- Released v0.4.0!
+- Released v0.4.0! The Trip Down Memory Update is here!
 - Tied PR for longest work time in a day and PR for longest changelog entry. lol.
 
 2026/10/08:
