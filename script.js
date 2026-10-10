@@ -267,15 +267,15 @@ const autoplayButton = document.getElementById("autoplayButton");
 const autoplayButtonText = document.getElementById("autoplayButtonText");
 let autoplaySpeed;
 
-let autoplayBool = False;// 0 if Pausing and text says "Play", and vice versa
+let autoplayBool = false;// 0 if Pausing and text says "Play", and vice versa
 
 autoplayButton.addEventListener('click', () => {
-	if (autoplayBool == False){
+	if (autoplayBool == false){
 		autoplayButtonText.textContent = "Pause";
-		autoplayBool = True;
+		autoplayBool = true;
 	} else {
 		autoplayButtonText.textContent = "Play";
-		autoplayBool = False;
+		autoplayBool = false;
 	}
 })
 //autoplaySpeed = document.getElementById("autoplaySpeedSelector").value
