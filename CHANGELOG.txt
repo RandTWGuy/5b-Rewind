@@ -2,11 +2,12 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
+
+- Add an autoplay feature
+
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
 - Add a timeline feature
-
-- Add an autoplay feature
 
 - Auto-update once all imgs have been pre-loaded.
 
