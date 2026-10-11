@@ -19,7 +19,8 @@ TODO (ranked in order of importance and ease):
 Work Time: 1hr
 - Spent a bunch of time thinking (on paper) how to fix the timeout issue.
 - Attempted Fix: introduce new bool var inTimeout. Resets to false everytime autoplay re-pressed. New timeout only scheduled if not inTimeout. THIS FAILED BECAUSE SETTIMEOUT ONLY RUNS AFTER ALL SYNC STUFF, AND THE WHILE LOOP KEEPS RUNNING (JUST NOT CALLING SETTIMEOUT B/C INTIMEOUT IS TRUE) SO THE PAGE CRASHES.
-- Attempted Fix #2: Recursive setTimeout. Each setTimeout sets a delay, afterwards it calls itself. Repeat until autoplay stops.
+- Attempted Fix #2: Recursive setTimeout. Each setTimeout sets a delay, afterwards it calls itself. Repeat until autoplay stops. That also didn't work, but idk why.
+- Github Copilot is so arrogant today. It speaks in a salesman pitch trying to convince me that their code is flawless when its riddled with bugs.
 
 2026/10/10:
 Work Time: 2hrs
