@@ -2,8 +2,7 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-
-- Add an autoplay feature
+- Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
 
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
 
@@ -24,7 +23,7 @@ Work Time: 2hrs
 - The canvas has to be updated after each autoplay step; Copilot lied to me about this. GRRR
 - AFTER ALL THAT, AUTOPLAY IS STILL BROKEN. AT LEAST IT DOESN'T CRASH, BUT IDK WHY IT IS STILL BROKE.
 - Um actually, slider.value and slider.step are strings for some weird reason, so I have to turn them into Numbers. I was today years old when I learned that.
-- After fixing the typos, the AUTOPLAY IS ACTUALLY WORKING !!!!!
+- After fixing the typos, the AUTOPLAY IS ACTUALLY WORKING !!!!! there are still bugs but im happy
 - KorZen DMed me, saying that all non-PR-when-submitted runs have been rejected from SRC. Thanks a lot!
 
 
