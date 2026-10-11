@@ -24,7 +24,8 @@ Work Time: 2hrs
 - AFTER ALL THAT, AUTOPLAY IS STILL BROKEN. AT LEAST IT DOESN'T CRASH, BUT IDK WHY IT IS STILL BROKE.
 - Um actually, slider.value and slider.step are strings for some weird reason, so I have to turn them into Numbers. I was today years old when I learned that.
 - After fixing the typos, the AUTOPLAY IS ACTUALLY WORKING !!!!! there are still bugs but im happy
-- KorZen DMed me, saying that all non-PR-when-submitted runs have been rejected from SRC. Thanks a lot!
+- KorZen DMed me, saying that all non-former-PR runs have been rejected from SRC. Thanks a lot!
+- Changed speed selector options to 0.25x, 0.5x, 0.75x, 1x, 1.5x, 2x, and 3x speeds. 1x speed is 20 IRL days in one Rewind second, i.e. (1:1728000 ratio)
 
 
 2026/10/10:
