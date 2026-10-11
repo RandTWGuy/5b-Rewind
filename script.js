@@ -291,6 +291,7 @@ autoplayButton.addEventListener('click', () => {
 				//safeguard
 				autoplayBool = false;
 				autoplayButtonText.textContent = "Play";
+			}
 		};
 		
 		autoplayStep(); // Start the autoplay
