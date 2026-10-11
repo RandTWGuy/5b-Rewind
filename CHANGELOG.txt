@@ -16,11 +16,12 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/11:
-Work Time: 1hr
+Work Time: 1.5hrs
 - Spent a bunch of time thinking (on paper) how to fix the timeout issue.
 - Attempted Fix: introduce new bool var inTimeout. Resets to false everytime autoplay re-pressed. New timeout only scheduled if not inTimeout. THIS FAILED BECAUSE SETTIMEOUT ONLY RUNS AFTER ALL SYNC STUFF, AND THE WHILE LOOP KEEPS RUNNING (JUST NOT CALLING SETTIMEOUT B/C INTIMEOUT IS TRUE) SO THE PAGE CRASHES.
 - Attempted Fix #2: Recursive setTimeout. Each setTimeout sets a delay, afterwards it calls itself. Repeat until autoplay stops. That also didn't work, but idk why.
 - Github Copilot is so arrogant today. It speaks in a salesman pitch trying to convince me that their code is flawless when its riddled with bugs.
+- The canvas has to be updated after each autoplay step; Copilot lied to me about this. GRRR
 
 2026/10/10:
 Work Time: 2hrs
