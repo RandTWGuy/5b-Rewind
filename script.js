@@ -282,15 +282,19 @@ autoplayButton.addEventListener('click', () => {
 
 		// autoplay-ing!
 		const autoplayStep = () => {
-			if (autoplayBool && slider.value < slider.max) {
-				slider.value = Number(slider.value) + Number(slider.step);
-				update(Number(slider.value));//update canvas
-				autoplayWait = document.getElementById("autoplaySpeedSelector").value;
-				setTimeout(autoplayStep, autoplayWait);
-			} else {
-				//safeguard
-				autoplayBool = false;
-				autoplayButtonText.textContent = "Play";
+			if (autoplayBool) {
+				if (slider.value < slider.max){
+					slider.value = Number(slider.value) + Number(slider.step);
+					update(Number(slider.value));//update canvas
+					autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+					setTimeout(autoplayStep, autoplayWait);
+				} else {
+					//set val to max
+					slider.value = Number(slider.max);
+					//end autoplay
+					autoplayBool = false;
+					autoplayButtonText.textContent = "Play";
+				}
 			}
 		};
 		
