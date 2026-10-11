@@ -295,25 +295,5 @@ autoplayButton.addEventListener('click', () => {
 		};
 		
 		autoplayStep(); // Start the autoplay
-		
-		// autoplay-ing!
-		// let inTimeout = false;// is autoplay currently in timeout?
-		
-		// while (autoplayBool && slider.value < slider.max){
-		// 	if (!inTimeout){
-		// 		inTimeout = true;//Immediately make timeout start
-		// 		autoplayWait = document.getElementById("autoplaySpeedSelector").value;
-		// 		//only happens once 
-		// 		setTimeout(
-		// 			// function
-		// 			() => {
-		// 				slider.value += slider.step;
-		// 				inTimeout = false;//only end timeout after delay
-		// 			},
-		// 			//delay
-		// 			autoplayWait
-		// 		);
-		// 	}			
-		// }
 	}
 })
