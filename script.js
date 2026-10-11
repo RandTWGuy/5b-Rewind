@@ -284,6 +284,7 @@ autoplayButton.addEventListener('click', () => {
 		const autoplayStep = () => {
 			if (autoplayBool && slider.value < slider.max) {
 				slider.value = Number(slider.value) + Number(slider.step);
+				update(slider.value);//update canvas
 				autoplayWait = document.getElementById("autoplaySpeedSelector").value;
 				setTimeout(autoplayStep, autoplayWait);
 			} else {
