@@ -24,7 +24,9 @@ Work Time: 2hrs
 - The canvas has to be updated after each autoplay step; Copilot lied to me about this. GRRR
 - AFTER ALL THAT, AUTOPLAY IS STILL BROKEN. AT LEAST IT DOESN'T CRASH, BUT IDK WHY IT IS STILL BROKE.
 - Um actually, slider.value and slider.step are strings for some weird reason, so I have to turn them into Numbers. I was today years old when I learned that.
-- After fixing the typos, the slider is actually WORKING!
+- After fixing the typos, the AUTOPLAY IS ACTUALLY WORKING !!!!!
+- KorZen DMed me, saying that all non-PR-when-submitted runs have been rejected from SRC. Thanks a lot!
+
 
 2026/10/10:
 Work Time: 2hrs
