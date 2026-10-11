@@ -22,6 +22,7 @@ Work Time: 1.5hrs
 - Attempted Fix #2: Recursive setTimeout. Each setTimeout sets a delay, afterwards it calls itself. Repeat until autoplay stops. That also didn't work, but idk why.
 - Github Copilot is so arrogant today. It speaks in a salesman pitch trying to convince me that their code is flawless when its riddled with bugs.
 - The canvas has to be updated after each autoplay step; Copilot lied to me about this. GRRR
+- AFTER ALL THAT, AUTOPLAY IS STILL BROKEN. AT LEAST IT DOESN'T CRASH, BUT IDK WHY IT IS STILL BROKE.
 
 2026/10/10:
 Work Time: 2hrs
