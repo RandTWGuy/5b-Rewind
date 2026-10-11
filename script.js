@@ -279,25 +279,36 @@ autoplayButton.addEventListener('click', () => {
 		//Clicking is starting
 		autoplayButtonText.textContent = "Pause";
 		autoplayBool = true;
+
+		// autoplay-ing!
+		const autoplayStep = () => {
+			if (autoplayBool && slider.value < slider.max) {
+				slider.value += slider.step;
+				autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+				setTimeout(autoplayStep, autoplayWait);
+			}
+		};
+		
+		autoplayStep(); // Start the autoplay
 		
 		// autoplay-ing!
-		let inTimeout = false;// is autoplay currently in timeout?
+		// let inTimeout = false;// is autoplay currently in timeout?
 		
-		while (autoplayBool && slider.value < slider.max){
-			if (!inTimeout){
-				inTimeout = true;//Immediately make timeout start
-				autoplayWait = document.getElementById("autoplaySpeedSelector").value;
-				//only happens once 
-				setTimeout(
-					// function
-					() => {
-						slider.value += slider.step;
-						inTimeout = false;//only end timeout after delay
-					},
-					//delay
-					autoplayWait
-				);
-			}			
-		}
+		// while (autoplayBool && slider.value < slider.max){
+		// 	if (!inTimeout){
+		// 		inTimeout = true;//Immediately make timeout start
+		// 		autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+		// 		//only happens once 
+		// 		setTimeout(
+		// 			// function
+		// 			() => {
+		// 				slider.value += slider.step;
+		// 				inTimeout = false;//only end timeout after delay
+		// 			},
+		// 			//delay
+		// 			autoplayWait
+		// 		);
+		// 	}			
+		// }
 	}
 })
