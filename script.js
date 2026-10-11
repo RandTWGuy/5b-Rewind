@@ -271,7 +271,7 @@ let autoplayBool = false;// 0 if Pausing and text says "Play", and vice versa
 let autoplayWait;//measured in Rewind ms per IRL day, so the wait time between days
 
 autoplayButton.addEventListener('click', () => {
-	if (autoplayBool == true){
+	if (autoplayBool){
 		//Clicking is stopping
 		autoplayButtonText.textContent = "Play";
 		autoplayBool = false;
@@ -279,20 +279,25 @@ autoplayButton.addEventListener('click', () => {
 		//Clicking is starting
 		autoplayButtonText.textContent = "Pause";
 		autoplayBool = true;
-
-		// //autoplay-ing!
-		// while (autoplayBool == true && slider.value < slider.max){
-		// 	autoplayWait = document.getElementById("autoplaySpeedSelector").value;
-		// 	//only happens once 
-		// 	setTimeout(
-		// 		// function
-		// 		() => {
-		// 			slider.value += slider.step;
-		// 		},
-		// 		//delay
-		// 		autoplayWait
-		// 	);
-			
-		// }
+		
+		// autoplay-ing!
+		let inTimeout = false;// is autoplay currently in timeout?
+		
+		while (autoplayBool && slider.value < slider.max){
+			if (!inTimeout){
+				inTimeout = true;//Immediately make timeout start
+				autoplayWait = document.getElementById("autoplaySpeedSelector").value;
+				//only happens once 
+				setTimeout(
+					// function
+					() => {
+						slider.value += slider.step;
+						inTimeout = false;//only end timeout after delay
+					},
+					//delay
+					autoplayWait
+				);
+			}			
+		}
 	}
 })
