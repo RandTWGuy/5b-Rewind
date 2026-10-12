@@ -50,6 +50,10 @@ let curr_center_y;
 
 //Text style
 ctx.textAlign = "center";
+
+//WR holder data fields
+wrHolderText = document.getElementById("wrHolderText");
+wrHolderTime = document.getElementById("wrHolderTime");
    
 // Pre-load all profile images
 const pre_load_imgs = {};
@@ -242,13 +246,20 @@ function update(curr_timestamp){
 		let player_name = curr_PRs[i][0];//name of the current player
 		let player_PR = curr_PRs[i][1];// PR of the current player
 		let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
-		//only do stuff for players with runs
+		
+		//Do the WR holder check
+		if (i == 0){
+			wrHolderText.textContent = player_name;
+			wrHolderText.textContent = player_PR;
+		}
+		
+		//only draw for players with runs
       	if (player_PR == 36000000){
 			break;//if a player has no run, so are all players behind them run-less.
 		} else {
 			//only do stuff for players with runs
 			draw(i,player_name,player_PR,pfp_bool);
-		}	
+		}		
 	}
 }
 
