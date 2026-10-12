@@ -184,7 +184,7 @@ function draw(index, player_name, player_PR, pfp_bool){
 	ctx.fillText(String(index + 1), curr_center_x, curr_center_y);
 
 	//Do the WR holder check here b/c times have been formatted
-	if (i == 0){
+	if (index == 0){
 		wrHolderText.textContent = player_name;
 		wrHolderTime.textContent = text;
 	}
