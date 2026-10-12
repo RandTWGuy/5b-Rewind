@@ -173,7 +173,7 @@ function draw(index, player_name, player_PR, pfp_bool){
 	//Display text at the bottom of the block
 	ctx.textBaseline = "bottom";
 	ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
-
+	
 	//semisolid ranking numbers
 	//Text style
    	ctx.fillStyle = "grey";
@@ -182,6 +182,12 @@ function draw(index, player_name, player_PR, pfp_bool){
    	//text
 	ctx.textBaseline = "middle";
 	ctx.fillText(String(index + 1), curr_center_x, curr_center_y);
+
+	//Do the WR holder check here b/c times have been formatted
+	if (i == 0){
+		wrHolderText.textContent = player_name;
+		wrHolderTime.textContent = text;
+	}
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -246,12 +252,6 @@ function update(curr_timestamp){
 		let player_name = curr_PRs[i][0];//name of the current player
 		let player_PR = curr_PRs[i][1];// PR of the current player
 		let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
-		
-		//Do the WR holder check
-		if (i == 0){
-			wrHolderText.textContent = player_name;
-			wrHolderText.textContent = player_PR;
-		}
 		
 		//only draw for players with runs
       	if (player_PR == 36000000){
