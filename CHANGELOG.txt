@@ -19,6 +19,7 @@ Work Time: 0.5hrs
 - The test is still ongoing. More work time coming soon!
 - Added erasCanvas, independent from mainCanvas, as the drawing board for the upcoming Time Eras feature.
 - Github Copilot can't even remove indents without removing other newlines, even when I explicitly prompt it to ONLY REMOVE INDENTS. Microsoft, why is your AI so stupid.
+- Added ErasData, an array in data.js that keeps track of time-independent era data.
 
 2026/10/12:
 Work Time: 0.5hrs
