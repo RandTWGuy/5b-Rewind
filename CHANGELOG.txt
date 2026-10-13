@@ -14,10 +14,15 @@ TODO (ranked in order of importance and ease):
 
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/13:
+Work Time: 0.5hrs
+- The test is still ongoing. More work time coming soon!
+- Added erasCanvas, independent from mainCanvas, as the drawing board for the upcoming Time Eras feature.
+
 2026/10/12:
 Work Time: 0.5hrs
 - I can't spend too much time today b/c I have a test tommorow.
-- Added WR-holder-data between slider and canvas.
+- Added WR-holder-data displayer between slider and canvas.
 
 2026/10/11:
 Work Time: 2hrs
