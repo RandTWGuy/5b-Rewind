@@ -2,9 +2,9 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
-
 - Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
+
+- Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
 
 - Add a timeline feature
 
@@ -19,7 +19,7 @@ Work Time: 0.5hrs
 - The test is still ongoing. More work time coming soon!
 - Added erasCanvas, independent from mainCanvas, as the drawing board for the upcoming Time Eras feature.
 - Github Copilot can't even remove indents without removing other newlines, even when I explicitly prompt it to ONLY REMOVE INDENTS. Microsoft, why is your AI so stupid.
-- Added ErasData, an array in data.js that keeps track of time-independent era data.
+- Added ErasData, an array in data.js that keeps track of time-independent era data. It also has era colors for future drawing onto erasCanvas.
 
 2026/10/12:
 Work Time: 0.5hrs
