@@ -59,13 +59,21 @@
 		<option value = "17"> 3x speed (60 days/sec) </option>
 	</select>
 	
-	<h3>Current WR Holder: <span id = "wrHolderText"> me lol </span> with a time of <span id = "wrHolderTime"> 27:63 </span></h3>
-    <!-- Put the canvas here -->
-    <canvas id="myCanvas" width="750" height="510" style="border:1px solid #ccc;"></canvas>
+	<b>Current WR Holder: <span id = "wrHolderText"> me lol </span> with a time of <span id = "wrHolderTime"> 27:63 </span></b>
+    <!-- Put the canvae here -->
+	<canvas id = "erasCanvas" width = "750" height =  "50" style = "border:5px solid #ccc;"></canvas>
+	<br>
+    <canvas id = "mainCanvas" width = "750" height = "510" style = "border:1px solid #ccc;"></canvas>
+
+	<!-- JS gEBI-ing -->
     <script defer>
-    // canvas
-    const canvas = document.getElementById('myCanvas');
+    // main canvas
+    const canvas = document.getElementById('mainCanvas');
     const ctx = canvas.getContext('2d');
+
+	//eras canvas
+	const erasCanvas = document.getElementById('erasCanvas');
+	const erasCtx = erasCanvas.getContext('2d);
     </script>
 
 	<!-- Do the data before the script -->
