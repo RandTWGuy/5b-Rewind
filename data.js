@@ -578,16 +578,16 @@ FiveBerData.sort((a,b) => a[1][0][0] - b[1][0][0])
 // Eras
 /*
 [
-	[EraStartingDate, EraName],
+	[EraStartingDate, EraName, EraColor],
 	etc.
 ]*/
 const ErasData = [
-	["2018-11-02",'Meester\'s Era'],//MUST START WITH 2018-11-02 OR THE CODE WILL BREAK
-	["2020-07-20",'AntLadder\'s Dominance'],
-	["2021-04-07",'The KorAnt Battle'],
-	["2021-06-24",'KorZen\'s Reign'],
-	["2025-03-11",'Rise of Many'],//Starts with Numbly
-	["2025-07-24",'The NumKor Battle']
+	["2018-11-02",'Meester\'s Era', 'yellow'],//MUST START WITH 2018-11-02 OR THE CODE WILL BREAK
+	["2020-07-20",'AntLadder\'s Dominance', 'green'],
+	["2021-04-07",'The KorAnt Battle', 'red'],
+	["2021-06-24",'KorZen\'s Reign', 'maroon'],
+	["2025-03-11",'Rise of Many', 'white'],//Starts with Numbly
+	["2025-07-24",'The NumKor Battle', 'blue']
 ]
 
 //Change Era Timestamps to be human-readable.
