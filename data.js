@@ -570,4 +570,5 @@ for (let i = 0; i < FiveBerData.length; i++){
 
 // Sort by first run's time.
 // This is to prevent players without runs moving around.
-FiveBerData.sort((a,b) => a[1][0][0] - b[1][0][0])
+// Actually, not needed anymore.
+//FiveBerData.sort((a,b) => a[1][0][0] - b[1][0][0])
