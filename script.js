@@ -225,10 +225,12 @@ function drawEras(currIndex){
 	erasCtx.clearRect(0, 0, erasCanvas_x, erasCanvas_y);
 	//draw, era-by-era
 	for (let i = 0; i < eraCount; i++){
+		//Left and right edges of the era block
 		let leftX = preCalcEraWidthList[i][0];
-		let rightX = preCalcEraWidthList[i][1],
+		let rightX = preCalcEraWidthList[i][1];
+		
 		erasCtx.fillStyle = ErasData[i][2];//color
-		erasCtx.drawRect(leftX, 0, rightX, erasCanvas_y);//draw the Rect
+		erasCtx.fillRect(leftX, 0, rightX - leftX, erasCanvas_y);//draw the Rect
 
 		//text
 		//text size
