@@ -49,8 +49,9 @@ let rect_y;
 let curr_center_x;
 let curr_center_y;
 
-//Text style
+//Text align
 ctx.textAlign = "center";
+erasCtx.textAlign = "center";
 
 //WR holder data fields
 wrHolderText = document.getElementById("wrHolderText");
@@ -62,6 +63,9 @@ const erasCanvas_x = erasCanvas.width;
 const erasCanvas_y = erasCanvas.height;
 let preCalcEraWidthList = Array(eraCount);//Every element is a start-end pair of pixels on the screen
 //goes to the subpixels so overlap-in-one-point s are allowed.
+
+const normalEraTextSize = 12;//in px Arial
+const currEraTextSize = 16;//in px Arial
 
 // Pre-load all profile images
 const pre_load_imgs = {};
@@ -215,6 +219,30 @@ function preCalcEraWidth(){
 	]
 }
 
+//Function Code: drawing era-related stuff
+function drawEras(currIndex){
+	//clear the canvas
+	erasCtx.clearRect(0, 0, erasCanvas_x, erasCanvas_y);
+	//draw, era-by-era
+	for (let i = 0; i < eraCount; i++){
+		let leftX = preCalcEraWidthList[i][0];
+		let rightX = preCalcEraWidthList[i][1],
+		erasCtx.fillStyle = ErasData[i][2];//color
+		erasCtx.drawRect(leftX, 0, rightX, erasCanvas_y);//draw the Rect
+
+		//text
+		//text size
+		if (i == currIndex){
+			erasCtx.font = String(currEraTextSize) + "px Arial";
+		} else {
+			erasCtx.font = String(normalEraTextSize) + "px Arial";
+		}
+
+		erasCtx.textBaseline = "middle";
+		erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, erasCanvas_y / 2);
+	}
+}
+
 //Function Code: Eras
 function updateEras(timestamp){
 	let eraIndex = eraCount - 1;//index of curr era
@@ -226,7 +254,7 @@ function updateEras(timestamp){
 
 	let currEraIndex = eraIndex;//current timestamp's era's index
 	
-	//drawEras(); in testing
+	drawEras(currEraIndex);//(re-)draw eras
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
