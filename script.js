@@ -54,7 +54,9 @@ ctx.textAlign = "center";
 //WR holder data fields
 wrHolderText = document.getElementById("wrHolderText");
 wrHolderTime = document.getElementById("wrHolderTime");
-   
+
+const eraCount = ErasData.length; //number of eras
+
 // Pre-load all profile images
 const pre_load_imgs = {};
 for (let i = 0; i < player_count; i++) {
@@ -193,11 +195,9 @@ function draw(index, player_name, player_PR, pfp_bool){
 //--------------------------------------------------------------------------------------------------------------------------------
 //Function Code: Eras
 function updateEras(timestamp){
-	eraCount = ErasData.length;//number of eras
-	
 	let eraIndex = eraCount - 1;//index of curr era
 	//start from the back
-	while (timestamp < ErasData[erasIndex][0]){
+	while (timestamp < ErasData[eraIndex][0]){
 		//if timestamp > last eras's start ==> 
 		eraIndex--;
 	}
