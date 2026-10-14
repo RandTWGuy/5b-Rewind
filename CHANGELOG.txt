@@ -14,6 +14,10 @@ TODO (ranked in order of importance and ease):
 
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/14:
+Work Time: 0.5hrs
+- Added updateEras(timestamp). It only calculates the current era index. Drawing is left to the not-yet-created drawEras.
+
 2026/10/13:
 Work Time: 0.5hrs
 - The test is still ongoing. More work time coming soon!
