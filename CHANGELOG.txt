@@ -15,10 +15,11 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/14:
-Work Time: 1hr
+Work Time: 1.5hrs
 - Added updateEras(timestamp). It only calculates the current era index.
 - Added preCalcEraWidth(). Pre-calculates width of eras on the screen. Only runs once at the very start.
 - Added drawEras(currIndex). Takes in the current era index and draws the era timeline. The current era's text's font is bigger.
+- Fixed a ton of bugs caused by today's development.
 
 2026/10/13:
 Work Time: 0.5hrs
