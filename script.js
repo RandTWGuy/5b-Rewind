@@ -5,6 +5,7 @@ const img_margin = 0.15;
 // Rank number opacity & margin PROPORTION
 const rank_opacity = 0.75;
 const rank_margin = 0.1;
+
 // logo preloading
 const logoImg = new Image();
 logoImg.src = './5b_Rewind_logo_2.0_no_outline.png';
@@ -36,7 +37,7 @@ const y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buf
 // Initialize vars
 //List of 5b-ers' data is already done from data.js
 const player_count = FiveBerData.length;
-let player_data = [];//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
+let player_data;//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	
 //current x/y block number
 let curr_x_block;
@@ -55,7 +56,12 @@ ctx.textAlign = "center";
 wrHolderText = document.getElementById("wrHolderText");
 wrHolderTime = document.getElementById("wrHolderTime");
 
+//eras canvas and stuff
 const eraCount = ErasData.length; //number of eras
+const erasCanvas_x = erasCanvas.width;
+const erasCanvas_y = erasCanvas.height;
+let preCalcEraWidthList = Array(eraCount);//Every element is a start-end pair of pixels on the screen
+//goes to the subpixels so overlap-in-one-point s are allowed.
 
 // Pre-load all profile images
 const pre_load_imgs = {};
@@ -193,6 +199,22 @@ function draw(index, player_name, player_PR, pfp_bool){
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
+//Function Code: width of each era on erasCtx
+function preCalcEraWidth(){
+	totalTimeSpan = Number(slider.max) - Number(slider.min);//in ms
+	for (let i = 0; i < eraCount - 1; i++){
+		preCalcEraWidthList[i] = [
+			((ErasData[i][0] - Number(slider.min)) / totalTimeSpan) * erasCanvas_x,
+			((ErasData[i + 1][0] - Number(slider.min)) / totalTimeSpan) * erasCanvas_x
+		]
+	}
+	//We must handle the last era differently b/c there is no dummy era from "today" to eternity
+	preCalcEraWidthList[eraCount - 1] = [
+			((ErasData[eraCount - 1][0] - Number(slider.min)) / totalTimeSpan) * erasCanvas_x,
+			erasCanvas_x
+	]
+}
+
 //Function Code: Eras
 function updateEras(timestamp){
 	let eraIndex = eraCount - 1;//index of curr era
@@ -281,15 +303,6 @@ function update(curr_timestamp){
 	}
 }
 
-	
-//Run function once
-update(Number(slider.value));
-
-// Check if the slider is changing
-slider.addEventListener('input', (e) => {
- 	update(Number(e.target.value));
-});
-
 // Autoplay
 //Tell JS about the HTML
 const autoplayButton = document.getElementById("autoplayButton");
@@ -330,3 +343,13 @@ autoplayButton.addEventListener('click', () => {
 		autoplayStep(); // Start the autoplay
 	}
 })
+
+//Pre-calculate era widths
+preCalcEraWidth();
+//Update at the start
+update(Number(slider.value));
+
+// Check if the slider is changing
+slider.addEventListener('input', (e) => {
+ 	update(Number(e.target.value));
+});
