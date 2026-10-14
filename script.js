@@ -191,7 +191,23 @@ function draw(index, player_name, player_PR, pfp_bool){
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
+//Function Code: Eras
+function updateEras(timestamp){
+	eraCount = ErasData.length;//number of eras
+	
+	let eraIndex = eraCount - 1;//index of curr era
+	//start from the back
+	while (timestamp < ErasData[erasIndex][0]){
+		//if timestamp > last eras's start ==> 
+		eraIndex--;
+	}
 
+	let currEraIndex = eraIndex;//current timestamp's era's index
+	
+	//drawEras(); in testing
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
 //Function Code: Updating
 function update(curr_timestamp){
 	const curr_date = new Date(curr_timestamp);
@@ -230,6 +246,8 @@ function update(curr_timestamp){
 	curr_PRs.sort((a,b) => a[1] - b[1])
 	
 	// drawing time!
+	updateEras(curr_timestamp);//update the eras displayer
+	
 	// Drawing a rectangle over the whole canvas as background.
 	ctx.globalAlpha = 1.0;
     ctx.fillStyle = '#ADD8E6';
