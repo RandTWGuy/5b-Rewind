@@ -234,13 +234,13 @@ function drawEras(currIndex){
 	}
 	
 	//add text, era-by-era
+	//text be black
+	erasCtx.fillStyle = 'black';
+	
 	for(let i = 0; i < eraCount; i++){
 		//Left and right edges of the era block
 		let leftX = preCalcEraWidthList[i][0];
 		let rightX = preCalcEraWidthList[i][1];
-		
-		//text be black
-		erasCtx.fillStyle = 'black';
 		
 		//text size
 		if (i == currIndex){
