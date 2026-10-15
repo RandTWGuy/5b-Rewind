@@ -64,8 +64,8 @@ const erasCanvas_y = erasCanvas.height;
 let preCalcEraWidthList = Array(eraCount);//Every element is a start-end pair of pixels on the screen
 //goes to the subpixels so overlap-in-one-point s are allowed.
 
-const normalEraTextSize = 12;//in px Arial
-const currEraTextSize = 16;//in px Arial
+const normalEraTextSize = 16;//in px Arial
+const currEraTextSize = 24;//in px Arial
 
 // Pre-load all profile images
 const pre_load_imgs = {};
@@ -229,10 +229,13 @@ function drawEras(currIndex){
 		let leftX = preCalcEraWidthList[i][0];
 		let rightX = preCalcEraWidthList[i][1];
 		
-		erasCtx.fillStyle = ErasData[i][2];//color
+		erasCtx.fillStyle = ErasData[i][2];// rect color
 		erasCtx.fillRect(leftX, 0, rightX - leftX, erasCanvas_y);//draw the Rect
 
 		//text
+		//black
+		erasCtx.fillStyle = 'black';
+		
 		//text size
 		if (i == currIndex){
 			erasCtx.font = String(currEraTextSize) + "px Arial";
