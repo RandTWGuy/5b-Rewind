@@ -587,7 +587,7 @@ const ErasData = [
 	["2021-04-07",'The KorAnt Battle', 'red'],
 	["2021-06-24",'KorZen\'s Reign', 'maroon'],
 	["2025-03-11",'Rise of Many', 'white'],//Starts with Numbly
-	["2025-07-24",'The NumKor Battle', 'blue']
+	["2026-07-24",'The NumKor Battle', 'blue']
 ]
 
 //Change Era Timestamps to be human-readable.
