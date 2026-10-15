@@ -243,8 +243,15 @@ function drawEras(currIndex){
 			erasCtx.font = String(normalEraTextSize) + "px Arial";
 		}
 
-		erasCtx.textBaseline = "middle";
-		erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, erasCanvas_y / 2);
+		// If 0th, 2nd, etc, Text on the top.
+		if (i % 2 == 0){
+			erasCtx.textBaseline = "top";
+			erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, 0);
+		} else {
+			// If 1st, 3rd, etc, Text at the bottom.
+			erasCtx.textBaseline = "bottom";
+			erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, erasCanvas_y);
+		}
 	}
 }
 
