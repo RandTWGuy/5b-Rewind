@@ -17,6 +17,7 @@ TODO (ranked in order of importance and ease):
 2026/10/15:
 Work Time: 0.5hrs
 - Made era block and era text different colors. Originally wanted to fix this last night but forgot.
+- Fixed a typo that made the NumKor battle start exactly one year earlier than was supposed to.
 
 2026/10/14:
 Work Time: 1.5hrs
