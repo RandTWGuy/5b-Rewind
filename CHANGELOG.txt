@@ -14,6 +14,10 @@ TODO (ranked in order of importance and ease):
 
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
+2026/10/15:
+Work Time: 0.5hrs
+- Made era block and era text different colors. Originally wanted to fix this last night but forgot.
+
 2026/10/14:
 Work Time: 1.5hrs
 - Added updateEras(timestamp). It only calculates the current era index.
