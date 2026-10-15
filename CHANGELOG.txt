@@ -15,9 +15,10 @@ TODO (ranked in order of importance and ease):
 - Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/15:
-Work Time: 0.5hrs
+Work Time: 1hr
 - Made era block and era text different colors. Originally wanted to fix this last night but forgot.
 - Fixed a typo that made the NumKor battle start exactly one year earlier than was supposed to.
+- Offset odd and even-numbered (0-indexed) era text. Odd on top, even on bottom. Reduces text overlap.
 
 2026/10/14:
 Work Time: 1.5hrs
