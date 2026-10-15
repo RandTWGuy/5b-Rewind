@@ -223,7 +223,7 @@ function preCalcEraWidth(){
 function drawEras(currIndex){
 	//clear the canvas
 	erasCtx.clearRect(0, 0, erasCanvas_x, erasCanvas_y);
-	//draw, era-by-era
+	//draw rect, era-by-era
 	for (let i = 0; i < eraCount; i++){
 		//Left and right edges of the era block
 		let leftX = preCalcEraWidthList[i][0];
@@ -231,9 +231,15 @@ function drawEras(currIndex){
 		
 		erasCtx.fillStyle = ErasData[i][2];// rect color
 		erasCtx.fillRect(leftX, 0, rightX - leftX, erasCanvas_y);//draw the Rect
-
-		//text
-		//black
+	}
+	
+	//add text, era-by-era
+	for(let i = 0; i < eraCount; i++){
+		//Left and right edges of the era block
+		let leftX = preCalcEraWidthList[i][0];
+		let rightX = preCalcEraWidthList[i][1];
+		
+		//text be black
 		erasCtx.fillStyle = 'black';
 		
 		//text size
