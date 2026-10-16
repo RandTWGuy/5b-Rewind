@@ -246,9 +246,19 @@ function drawEras(currIndex){
 			erasCtx.font = String(normalEraTextSize) + "px Arial";
 		}
 		
-		// If 0th, 2nd, etc, Text on the top.
 		erasCtx.fillStyle = ErasData[i][[3];//text color
+
+		//text align
+		//prevent words going off screen
+		if (i == 0){
+			erasCtx.textAlign = 'left';
+		} else if (i == eraCount - 1){
+			erasCtx.textAlign = 'right';
+		} else {
+			erasCtx.textAlign = 'center';
+		}
 		
+		// If 0th, 2nd, etc, Text on the top.
 		if (i % 2 == 0){
 			erasCtx.textBaseline = "top";
 			erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, 0);
