@@ -9,11 +9,12 @@ TODO (ranked in order of importance and ease):
 - Add other categories.
 
 2026/10/16:
-Work Time: 0.5hrs
+Work Time: 1hr
 - Added era text colors in ErasData.
 - Prevent era text going off screen by left/right textAlign-ing the first and last eras.
 - Removed the era text off-screen protector of the first era, b/c its so long. Yes this does make it unadaptable to non-5b stuff, but this is called 5b Rewind wdym unadaptable.
 - Added line break before erasCanvas. Fixes bug where, if the browser screen is shrunk, erasCanvas moves all over the place.
+- Removed erasCanvas' border. This was supposed to make the slider and erasCanvas line up, but there is still a 1-2 pixel difference. Probably rounding errors, if it's not the border's fault. If it is rounding errors, then I can do nothing.
 
 2026/10/15:
 Work Time: 1hr
