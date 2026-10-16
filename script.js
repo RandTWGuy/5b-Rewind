@@ -246,7 +246,7 @@ function drawEras(currIndex){
 			erasCtx.font = String(normalEraTextSize) + "px Arial";
 		}
 		
-		erasCtx.fillStyle = ErasData[i][[3];//text color
+		erasCtx.fillStyle = ErasData[i][3];//text color
 
 		//text align
 		//prevent words going off screen
