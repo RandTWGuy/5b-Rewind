@@ -2,17 +2,11 @@ CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
 
-- Add "Time Eras", eg. "Meester's Era", "AntLadder's rise", "The KorAnt battle", "KorZen's reign", "The grab-boosting revolution", "Numbly's rise", "The KorNum battle", etc.
-
 - Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
-
-- Add a timeline feature
 
 - Auto-update once all imgs have been pre-loaded.
 
 - Add other categories.
-
-- Maybe, use the length of bars to represent runtime. Visualizing the time is gonna be really cool, ideally should be proportional. (For example, me getting a PR by 30 seconds is mid, but KorZen getting one is literally gonna start WW3)
 
 2026/10/16:
 Work Time: 0.5hrs
