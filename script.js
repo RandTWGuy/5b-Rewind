@@ -233,10 +233,7 @@ function drawEras(currIndex){
 		erasCtx.fillRect(leftX, 0, rightX - leftX, erasCanvas_y);//draw the Rect
 	}
 	
-	//add text, era-by-era
-	//text be black
-	erasCtx.fillStyle = 'black';
-	
+	//add text, era-by-era	
 	for(let i = 0; i < eraCount; i++){
 		//Left and right edges of the era block
 		let leftX = preCalcEraWidthList[i][0];
@@ -248,8 +245,10 @@ function drawEras(currIndex){
 		} else {
 			erasCtx.font = String(normalEraTextSize) + "px Arial";
 		}
-
+		
 		// If 0th, 2nd, etc, Text on the top.
+		erasCtx.fillStyle = ErasData[i][[3];//text color
+		
 		if (i % 2 == 0){
 			erasCtx.textBaseline = "top";
 			erasCtx.fillText(ErasData[i][1], (leftX + rightX) / 2, 0);
