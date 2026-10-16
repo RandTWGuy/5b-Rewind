@@ -22,6 +22,7 @@ Work Time: 1hr
 - Fixed a typo that made the NumKor battle start exactly one year earlier than was supposed to.
 - Offset odd and even-numbered (0-indexed) era text. Odd on top, even on bottom. Reduces text overlap.
 - Reordered the eras drawing order. First draws all era blocks, then all text. Should fix the problem of text getting overlaid by era blocks.
+- Added Yarik's new run. A 12:22 earlier today.
 
 2026/10/14:
 Work Time: 1.5hrs
