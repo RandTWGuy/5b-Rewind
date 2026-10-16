@@ -250,9 +250,7 @@ function drawEras(currIndex){
 
 		//text align
 		//prevent words going off screen
-		if (i == 0){
-			erasCtx.textAlign = 'left';
-		} else if (i == eraCount - 1){
+		if (i == eraCount - 1){
 			erasCtx.textAlign = 'right';
 		} else {
 			erasCtx.textAlign = 'center';
