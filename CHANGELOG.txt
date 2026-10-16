@@ -18,6 +18,7 @@ TODO (ranked in order of importance and ease):
 Work Time: 0.5hrs
 - Added era text colors in ErasData.
 - Prevent era text going off screen by left/right textAlign-ing the first and last eras.
+- Removed the era text off-screen protector of the first era, b/c its so long. Yes this does make it unadaptable to non-5b stuff, but this is called 5b Rewind wdym unadaptable.
 
 2026/10/15:
 Work Time: 1hr
