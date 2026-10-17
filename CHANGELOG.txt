@@ -11,6 +11,7 @@ TODO (ranked in order of importance and ease):
 2026/10/17:
 Work Time: 0.5hrs
 - Tried adding different categories but things went badly.
+- Added my new run (16:02.217 on 2026-10-17).
 
 2026/10/16:
 Work Time: 1hr
