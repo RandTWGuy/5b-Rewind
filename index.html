@@ -25,9 +25,7 @@
 	
 	<b>Still in testing phase! If you wish to add or correct your info, DM me on <a href = "https://www.speedrun.com/users/yuGesenawiaTmodnaRA">speedrun.com</a></b>
 	
-    <br>
-	<b>THE AUTOPLAY FEATURE IS STILL IN TESTING. BEWARE OF WEIRD BUGS OVER THE NEXT FEW DAYS WITH IT.</b>
-	<hr>
+    <hr>
 	<b>Slide this slider to change the date! The canvas will display the Any% RTA PRs of each player at that date.</b>
 	<hr>
 	
@@ -59,7 +57,15 @@
 	</select>
 	
 	<b>Current WR Holder: <span id = "wrHolderText"> me lol </span> with a time of <span id = "wrHolderTime"> 27:63 </span></b>
-    <br>
+    
+	<!-- Category Selector -->
+	<select id = "categorySelector">
+		<!-- value is category name -->
+		<option value = "anyPercent" selected> Any% </option>
+		<option value = "matchAnyPercent"> Match Segment Any% </option>
+	</select>
+	
+	<br>
 	<!-- Put the canvae here -->
 	<canvas id = "erasCanvas" width = "750" height =  "50" style = "border:0px solid #ccc;"></canvas>
 	<br>
