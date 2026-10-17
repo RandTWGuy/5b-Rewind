@@ -8,6 +8,10 @@ TODO (ranked in order of importance and ease):
 
 - Add other categories.
 
+2026/10/17:
+Work Time: 0.5hrs
+- Tried adding different categories but things went badly.
+
 2026/10/16:
 Work Time: 1hr
 - Added era text colors in ErasData.
