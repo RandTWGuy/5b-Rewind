@@ -549,6 +549,13 @@
 			  [
 				  ["2019-06-28","485:02.533"]
 			  ]
+		  ],
+		  [
+			  'Eyadmations',
+			  [
+				  ["2026-10-22","14:10.900"]
+			  ],
+			  "https://www.speedrun.com/static/user/jmz0234x/image.png"
 		  ]
 	  ];
 
