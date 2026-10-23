@@ -126,6 +126,15 @@ function draw(index, player_name, player_PR, pfp_bool){
 	//draw block
 	ctx.globalAlpha = 1.0;
     ctx.fillRect(rect_x,rect_y,block_x,block_y);
+
+	//semisolid ranking numbers
+	//Text style
+   	ctx.fillStyle = "grey";
+	ctx.globalAlpha = rank_opacity;
+	ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
+   	//text
+	ctx.textBaseline = "middle";
+	ctx.fillText(String(index + 1), curr_center_x, curr_center_y);
 	
 	// semi-opaque profile pic
 	// if there is a profile pic:
@@ -186,15 +195,8 @@ function draw(index, player_name, player_PR, pfp_bool){
 	ctx.textBaseline = "bottom";
 	ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
 	
-	//semisolid ranking numbers
-	//Text style
-   	ctx.fillStyle = "grey";
-	ctx.globalAlpha = rank_opacity;
-	ctx.font = String(block_x * (1 - 2 * rank_margin)) + "px Arial";//block_x is the width of a block, which is ok for square blocks only
-   	//text
-	ctx.textBaseline = "middle";
-	ctx.fillText(String(index + 1), curr_center_x, curr_center_y);
-
+	
+	
 	//Do the WR holder check here b/c times have been formatted
 	if (index == 0){
 		wrHolderText.textContent = player_name;
