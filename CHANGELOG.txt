@@ -19,6 +19,7 @@ Work Time: 1 min lol
 2026/10/20:
 Work Time: 1 min lol
 - Added my new run (15:08.033 on 2026-10-20)
+- Draw ranking numbers earlier to not overlap w/ pfp
 
 2026/10/19:
 Work Time: 1 min lol
