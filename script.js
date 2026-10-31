@@ -111,7 +111,11 @@ function draw(index, player_name, player_PR, pfp_bool){
    	//Calculate the Rectangle
    	rect_x = margin_x + curr_x_block*(block_x + buffer_x);//margin + which block we're at
    	rect_y = margin_y + curr_y_block*(block_y + buffer_y);//ditto
-    
+	
+    //Calculate center of block
+   	curr_center_x = rect_x + (block_x / 2);
+	curr_center_y = rect_y + (block_y / 2);
+	
 	//set color
 	if (index == 0){
 		ctx.fillStyle = 'gold';
@@ -159,9 +163,6 @@ function draw(index, player_name, player_PR, pfp_bool){
    	ctx.fillStyle = "black";//black
 	ctx.globalAlpha = 1.0;
 			
-	//Calculate center of block
-   	curr_center_x = rect_x + (block_x / 2);
-	curr_center_y = rect_y + (block_y / 2);
 	//Player name text top of block
 	ctx.textBaseline = "top";
    	ctx.fillText(player_name, curr_center_x, curr_center_y - (block_y / 2));
@@ -194,9 +195,7 @@ function draw(index, player_name, player_PR, pfp_bool){
 	//Display text at the bottom of the block
 	ctx.textBaseline = "bottom";
 	ctx.fillText(text, curr_center_x, curr_center_y + (block_y / 2));
-	
-	
-	
+			
 	//Do the WR holder check here b/c times have been formatted
 	if (index == 0){
 		wrHolderText.textContent = player_name;
