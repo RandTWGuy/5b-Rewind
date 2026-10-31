@@ -1,3 +1,7 @@
+//IN THE MEANTIME BEFORE API IS FINISHED, HAND-COMPILED FiveBerData WILL STILL EXIST
+
+
+
 	//List of 5b-ers' data.
 	/*
 	[
