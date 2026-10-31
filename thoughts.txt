@@ -1,0 +1,7 @@
+I'll just put my thoughts on implementations here. APIs and objects are hard.
+
+We only need: PLAYER got TIME in CATEGORY on DATE.
+PLAYER -- id; need a conversion to name
+TIME -- time, in ms. It's JSON["data"]["run_index"]["times"]["realtime_t"]*1000 in the API, if that isn't zero.
+CATEGORY -- category id. Gotta check this more.
+DATE -- Either JSON["date"] or JSON["date-time"]. Not sure if I want to include time, but if we're going UTC it has to be that way.
