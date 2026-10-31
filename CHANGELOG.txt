@@ -14,6 +14,7 @@ TODO (ranked in order of importance and ease):
 Work Time: 0.5hrs
 - Added my new run (14:51.917 on 2026-10-28)
 - Fixed off-by-one error on the ranking numbers
+- Add important note that this repo will be forked to accommodate near-future API fetch and data refactoring.
 
 2026/10/23:
 Work Time: 0.5hrs
