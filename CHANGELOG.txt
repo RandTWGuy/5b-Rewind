@@ -4,9 +4,16 @@ TODO (ranked in order of importance and ease):
 
 - Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
 
+- Use KorZen's API
+
 - Auto-update once all imgs have been pre-loaded.
 
 - Add other categories.
+
+2026-10-28:
+Work Time: 0.5hrs
+- Added my new run (14:51.917 on 2026-10-28)
+- Fixed off-by-one error on the ranking numbers
 
 2026/10/23:
 Work Time: 0.5hrs
