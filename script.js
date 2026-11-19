@@ -7,10 +7,10 @@ const rank_opacity = 0.75;
 const rank_margin = 0.1;
 
 // logo preloading
-const logoImg = new Image();
-logoImg.src = './5b_Rewind_logo_2.0_no_outline.png';
-//opacity
-const logo_opacity = 0.7;
+// const logoImg = new Image();
+// logoImg.src = './5b_Rewind_logo_2.0_no_outline.png';
+// //opacity
+// const logo_opacity = 0.7;
 
 // canvas dimensions
 const canvas_x = canvas.width;
@@ -36,7 +36,7 @@ const y_blocks = Math.floor((canvas_y - (margin_y * 2) - block_y)/(block_y + buf
 
 // Initialize vars
 //List of 5b-ers' data is already done from data.js
-const player_count = FiveBerData.length;
+const player_count = Object.keys(FiveBerData).length
 let player_data;//Will turn into [[date1,PR1],[date2,PR2]] eventually; changed for each player
 	
 //current x/y block number
@@ -68,14 +68,14 @@ const normalEraTextSize = 16;//in px Arial
 const currEraTextSize = 24;//in px Arial
 
 // Pre-load all profile images
-const pre_load_imgs = {};
-for (let i = 0; i < player_count; i++) {
-	if (FiveBerData[i].length == 3) {
-		const img = new Image();
-   		img.src = FiveBerData[i][2];
-   		pre_load_imgs[FiveBerData[i][0]] = img; // Store by player name
-	}
-}
+// const pre_load_imgs = {};
+// for (let i = 0; i < player_count; i++) {
+// 	if (FiveBerData[i].length == 3) {
+// 		const img = new Image();
+//   		img.src = FiveBerData[i][2];
+//   		pre_load_imgs[FiveBerData[i][0]] = img; // Store by player name
+// 	}
+// }
 
 
 // The slider and it's updates
@@ -141,22 +141,22 @@ function draw(index, player_name, player_PR, pfp_bool){
 	ctx.fillText(String(index + 1), curr_center_x, curr_center_y);
 	
 	// semi-opaque profile pic
-	// if there is a profile pic:
-	if (pfp_bool && pre_load_imgs[player_name]) {
-  		const profile_img = pre_load_imgs[player_name];
+// 	// if there is a profile pic:
+// 	if (pfp_bool && pre_load_imgs[player_name]) {
+//   		const profile_img = pre_load_imgs[player_name];
  		
-  		// Only draw if the image is already loaded
-  		if (profile_img.complete) {
-    		ctx.globalAlpha = img_opacity;
-    		ctx.drawImage(
-    			profile_img,
-    			rect_x + (img_margin * block_x),           // x offset
-    			rect_y + (img_margin * block_y),           // y offset
-    			(1 - 2 * img_margin) * block_x,            // width
-    			(1 - 2 * img_margin) * block_y             // height
-    		);
-  		}
-	}
+//   		// Only draw if the image is already loaded
+//   		if (profile_img.complete) {
+//     		ctx.globalAlpha = img_opacity;
+//     		ctx.drawImage(
+//     			profile_img,
+//     			rect_x + (img_margin * block_x),           // x offset
+//     			rect_y + (img_margin * block_y),           // y offset
+//     			(1 - 2 * img_margin) * block_x,            // width
+//     			(1 - 2 * img_margin) * block_y             // height
+//     		);
+//   		}
+// 	}
 			
 	//Text style
 	ctx.font = "14px Arial";
@@ -292,34 +292,38 @@ function update(curr_timestamp){
 	const formatted_date = curr_date.toISOString().split('T')[0];
 	display.textContent = formatted_date;
 	
-	const curr_PRs = structuredClone(FiveBerData);
-	//Will turn into [[player1,PR1],[player2,PR2]] eventually;
-	// what was profile pic links will remain profile pic links
+	curr_PRs = structuredClone(FiveBerData);
+	//Will turn into [player1:PR1,player2:PR2] eventually;
+	//// what was profile pic links will remain profile pic links
 	// need player names 'cause we're gonna sort this thing in order
 	// Calculate everyone's PRs at this time
 	for (let i = 0; i < player_count; i++){
+	    //player_name
+	    player_name = Object.keys(FiveBerData)[i];
 		//list of runs (timestamp+PR)
-		player_data = FiveBerData[i][1];
+		player_data = Object.values(FiveBerData)[i];
 		//check if the player has a run at this time
-		//curr_player_data[0][0] is the timestamp of the first ever run
-		if (curr_timestamp < player_data[0][0]){
+		//player_data[0][0] is the timestamp of the first ever run
+		if (curr_timestamp < Date.parse(player_data[0]["date-time"])){
 			// if player doesn't have a run yet:
 			// set their PR to an 36000000, which means "NO RUN YET"
 			// so that converting to mm:ss:xxx can have an exception
-			curr_PRs[i][1] = 36000000;
+			curr_PRs[player_name] = 36000000;
 		} else {
 			// if player already has runs:
 			// keep running, from late to early runs, if run is after curr_timestamp
 			let run_index = player_data.length - 1;
-			while (curr_timestamp < player_data[run_index][0]){
+			while (curr_timestamp < Date.parse(player_data[run_index]["date-time"])){
 				run_index--;
 			}
-			//this run is the curr_PR.
-			curr_PRs[i][1] = player_data[run_index][1];
+			//this run is the curr_PR
+			curr_PRs[player_name] = player_data[run_index]["RTA"];
 		}	
 	}
 	//sort curr_PRs by time, sorting the player names with them
+	curr_PRs = Object.entries(curr_PRs)
 	curr_PRs.sort((a,b) => a[1] - b[1])
+	curr_PRs = Object.fromEntries(curr_PRs)
 	
 	// drawing time!
 	updateEras(curr_timestamp);//update the eras displayer
@@ -329,7 +333,7 @@ function update(curr_timestamp){
     ctx.fillStyle = '#ADD8E6';
     ctx.fillRect(0,0,canvas_x,canvas_y);
 	
-	// logo
+	//logo
 	if (logoImg.complete){
 		ctx.globalAlpha = logo_opacity;
 		ctx.drawImage(
@@ -343,9 +347,12 @@ function update(curr_timestamp){
 	}
 	// Loop through everybody
     for (let i = 0; i < Math.min(player_count, x_blocks * y_blocks); i++){
-		let player_name = curr_PRs[i][0];//name of the current player
-		let player_PR = curr_PRs[i][1];// PR of the current player
-		let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
+		let player_name = Object.keys(curr_PRs)[i];//name of the current player
+		let player_PR = Object.values(curr_PRs)[i];// PR of the current player
+
+		//Add pfp stuff in the future
+		//let pfp_bool = (curr_PRs[i].length == 3);//boolean for pfp include-ence
+		let pfp_bool = false
 		
 		//only draw for players with runs
       	if (player_PR == 36000000){
