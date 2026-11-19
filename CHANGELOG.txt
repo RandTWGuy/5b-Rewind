@@ -3,6 +3,8 @@ CHANGELOG FOR 5B REWIND
 TODO (ranked in order of importance and ease):
 - Change data json/obj from {player:runs,...} to {{player:player, runs:runs},...}
 
+- Re-add pfps
+
 - Change erasData to json/obj also.
 
 - Integrate API-python code.
@@ -14,6 +16,7 @@ TODO (ranked in order of importance and ease):
 2026-11-19:
 Work Time: 1hr
 - Changed data structure from nested arrays to json/obj. Massive readability improvement? idk.
+- Removed pfps for the sake of API.
 
 2026-10-28:
 Work Time: 0.5hrs
