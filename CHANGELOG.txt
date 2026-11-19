@@ -1,14 +1,19 @@
 CHANGELOG FOR 5B REWIND
 
 TODO (ranked in order of importance and ease):
+- Change data json/obj from {player:runs,...} to {{player:player, runs:runs},...}
+
+- Change erasData to json/obj also.
+
+- Integrate API-python code.
 
 - Fix autoplay bug where autoplay does not stop after reaching the end (and defeating the ender dragon hahaha is that funny)
 
-- Use KorZen's API
-
 - Auto-update once all imgs have been pre-loaded.
 
-- Add other categories.
+2026-11-19:
+Work Time: 1hr
+- Changed data structure from nested arrays to json/obj. Massive readability improvement? idk.
 
 2026-10-28:
 Work Time: 0.5hrs
